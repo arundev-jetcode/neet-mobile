@@ -7,8 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "backgroundColor": "#02BCBC"
+      "image": "./assets/splash.png"
      
     },
     "assetBundlePatterns": [
@@ -19,8 +18,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/adaptive-icon.png"
       },
       "package": "com.arun_jetcode.neetmobile"
     },
