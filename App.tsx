@@ -3,25 +3,33 @@ import { StyleSheet, Text, View,StatusBarStyle } from 'react-native';
 import { NativeBaseProvider, Box } from "native-base";
 import Colors from './src/styles/Colors';
 import BottomBar from './src/navigation/BottomBar';
+import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Platform } from 'react-native';
-// import LinearGradient from 'react-native-linear-gradient';
+import * as SplashScreen from 'expo-splash-screen';
+import Login from './src/pages/Login';
+
+
 export default function App() {
-const version = Platform.Version
-console.log(version,"version")
+  const [appState, setAppState] = useState<any>({
+     bgColor:"#00474C",
+     indicatorColor:"light"
+  })
+
+// console.log(SplashScreen.Logs,"log")
+
+  console.log(appState);
+
+
   return (
     <NativeBaseProvider>
          <StatusBar
-         backgroundColor={Colors.darkGreen}
-         style='light'
+        backgroundColor={appState.bgColor} 
+         style={appState.indicatorColor}
       />
-   <BottomBar/>
-   {/* <LinearGradient
-        colors={['purple', 'white']}
-        style={styles.container}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-      ></LinearGradient> */}
+   {/* <BottomBar setAppState={setAppState}/> */}
+   <Login/>
+
+ 
     </NativeBaseProvider>
   );
 }

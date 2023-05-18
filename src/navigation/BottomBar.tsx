@@ -1,6 +1,6 @@
 import React from "react";
 import {createMaterialBottomTabNavigator} from "@react-navigation/material-bottom-tabs";
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer , useNavigationContainerRef } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faRankingStar } from '@fortawesome/free-solid-svg-icons/faRankingStar'
 import { faHouse } from '@fortawesome/free-solid-svg-icons/faHouse'
@@ -17,8 +17,7 @@ import Notification from "../pages/Notification"
 import  Colors  from "../styles/Colors";
 
 
-const BottomBar = ()=>{
-
+const BottomBar = ({setAppState}:any)=>{
     const Tab = createMaterialBottomTabNavigator();
     const bottombarDatas =[
         {iconName:"Home",
@@ -44,19 +43,43 @@ const BottomBar = ()=>{
         {iconName:"Ranking",
         icon:faRankingStar,
         screenName:Ranking
-    
         },
     
     ]
 
+    let navigationRef  = useNavigationContainerRef()
+    navigationRef.addListener('state', (e) => {
+      // You can get the raw navigation state (partial state object of the root navigator)
+      
+    
+      // Or get the full state object with `getRootState()`
+
+      let route = navigationRef.getCurrentRoute()
+
+      if(route){
+         switch(route.name){
+              case 'Home':
+                setAppState({ bgColor:"#00474C",
+                 indicatorColor:"light"})
+                 break;
+              default:
+                setAppState({
+                  bgColor:"transparent",
+                  indicatorColor:"light"
+                 })
+                 break;
+         }
+      }
+    });
     return(
-   <NavigationContainer>
+   <NavigationContainer ref={navigationRef}>
     <Tab.Navigator
       initialRouteName="Home"
       activeColor={Colors.white}
       barStyle={{ backgroundColor: Colors.darkGreen }}
     >
       {bottombarDatas.map((res,i)=>{
+        
         return(
           <Tab.Screen
           key={i}
@@ -76,4 +99,4 @@ const BottomBar = ()=>{
     )
 }
 
-export default BottomBar
+export default BottomBar;

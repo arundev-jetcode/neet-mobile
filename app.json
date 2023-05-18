@@ -5,10 +5,16 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "androidStatusBar": {
+      "translucent": true
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "splash": {
-      "image": "./assets/splash.png"
-     
+      "image": "./assets/splash.png",
+      "resizeMode":"cover",
+      "backgroundColor":"#02BCBC"
     },
     "assetBundlePatterns": [
       "**/*"

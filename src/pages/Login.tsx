@@ -1,17 +1,13 @@
 import { View,Text,StyleSheet, ImageBackground } from "react-native"
 import React from "react"
 import { LinearGradient } from "expo-linear-gradient"
-import { LinearBgColor } from "../styles/Colors"
-import StatusBar from "../components/StatusBar"
- const Profile =()=>{
+import { LinearBgColor } from "../styles/Colors";
 
-    const BackgroundImg = require("../assets/BgImg.png")
+const Login=()=>{
 
+    const BackgroundImg = require("../assets/BgImg.png");
+ 
     return(
-      <>
-       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
-      
-      
         <LinearGradient
         colors={[LinearBgColor.hospitalblue1,LinearBgColor.hospitalblue2,LinearBgColor.hospitalblue3,LinearBgColor.hospitalblue4]}
         style={styles.container}
@@ -27,7 +23,6 @@ import StatusBar from "../components/StatusBar"
     </ImageBackground> 
 
       </LinearGradient>
-      </>
     )
 }
 
@@ -44,4 +39,5 @@ const styles = StyleSheet.create({
       resizeMode:'stretch'
     }
   });
-export default Profile;
+
+  export default Login;
