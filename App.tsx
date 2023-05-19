@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import Login from './src/pages/Login';
+import UploadImage from './src/pages/addImage';
 
 
 export default function App() {
@@ -26,9 +27,9 @@ export default function App() {
         backgroundColor={appState.bgColor} 
          style={appState.indicatorColor}
       />
-   {/* <BottomBar setAppState={setAppState}/> */}
-   <Login/>
-
+   <BottomBar setAppState={setAppState}/>
+   {/* <Login/> */}
+{/* <UploadImage/> */}
  
     </NativeBaseProvider>
   );
