@@ -5,6 +5,7 @@ import { StyleSheet } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 import { faEye, faEyeSlash, faLock } from "@fortawesome/free-solid-svg-icons";
+import { horizontalScale, moderateScale, verticalScale } from "../styles/Responsive";
 
 
 const InputBox = ({ inputType, placeholderName,componentName,fieldType,value,label }: LoginProps) => {
@@ -35,7 +36,7 @@ const InputBox = ({ inputType, placeholderName,componentName,fieldType,value,lab
     
     
     {fieldType ==="select" ?  <View style={styles.container} >
-       <Select borderColor="transparent" selectedValue={service} minWidth="320"  accessibilityLabel="Choose Service" placeholder="Choose Service" _selectedItem={{
+       <Select borderColor="transparent" selectedValue={service}   accessibilityLabel="Choose Service" placeholder="Choose Service" _selectedItem={{
         bg: "teal.600",
         endIcon: <CheckIcon size="5" />
       }} mt={1} onValueChange={itemValue => setService(itemValue)}>
@@ -48,7 +49,7 @@ const InputBox = ({ inputType, placeholderName,componentName,fieldType,value,lab
          
         </Select>
         </View>:  <View style={styles.container} >
-<Input minWidth="320" type={inputType} borderColor="transparent" placeholder={placeholderName} />
+<Input  type={inputType} borderColor="transparent" placeholder={placeholderName} />
 
     </View>}
        
@@ -59,20 +60,20 @@ const InputBox = ({ inputType, placeholderName,componentName,fieldType,value,lab
 const styles = StyleSheet.create({
     container: {
         marginTop: 12,
-        width: '80%',
+        width: verticalScale(300),
         backgroundColor: "white",
-        borderRadius:6
+        borderRadius:moderateScale(6)
     
     },
     input: {
-        height: 50, 
-        fontSize: 20,
+        height: verticalScale(50), 
+        fontSize: moderateScale(20),
         alignItems:"center"
     
     },
     username:{
-        height: 50, 
-        fontSize: 20,
+        height: verticalScale(50), 
+        fontSize: horizontalScale(20),
         borderColor:"none",
 
     }
