@@ -18,5 +18,13 @@ export interface LoginProps {
   componentName?:string,
   fieldType?:string,
   value?:string | undefined,
-  label?:string[] | undefined
+  label?:string[] | undefined,
+  size?:number
+}
+
+
+export interface RadioButtonProps {
+labelName:string,
+options: {label: string ; value: string;}[]
+
 }

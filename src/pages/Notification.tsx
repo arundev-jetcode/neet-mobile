@@ -1,9 +1,17 @@
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  useWindowDimensions,
+} from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { LinearBgColor } from "../styles/Colors";
 import StatusBar from "../components/StatusBar";
 import Colors from "../styles/Colors";
+import { moderateScale } from "../styles/Responsive";
+import FontScale from "../styles/fontResponsive";
 const Notification = () => {
   const BackgroundImg = require("../assets/BgImg.png");
 
@@ -30,9 +38,9 @@ const Notification = () => {
             <View
               style={{
                 backgroundColor: "rgba(47, 47, 47, 0.45)",
-                padding: 20,
+                padding: moderateScale(20),
                 borderRadius: 8,
-                width: 350,
+                width: "90%",
               }}
             >
               <View
@@ -43,16 +51,16 @@ const Notification = () => {
                   columnGap: 12,
                 }}
               >
-                <Text style={{ fontSize: 20, color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(15), color: Colors.white }}>
                   Medico
                 </Text>
                 <Text style={{ color: Colors.white }}>now</Text>
               </View>
               <View>
-                <Text style={{ fontSize: 18, color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(17), color: Colors.white }}>
                   Exam updates
                 </Text>
-                <Text style={{ fontSize: 20, color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(17), color: Colors.white }}>
                   Modal exam date comming soon
                 </Text>
               </View>
@@ -73,7 +81,7 @@ const styles = StyleSheet.create({
   Img: {
     width: "100%",
     height: "100%",
-    opacity: 0.8,
+    // opacity: 0.8,
     resizeMode: "stretch",
   },
 });
