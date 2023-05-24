@@ -24,6 +24,7 @@ import {
   verticalScale,
   moderateScale,
 } from "../styles/Responsive";
+import { ZStack } from "native-base";
 const Profile = () => {
   const [image, setImage] = useState<any>(null);
 
@@ -104,13 +105,15 @@ const Profile = () => {
       >
         <ImageBackground source={BackgroundImg} style={styles.Img}>
           <View style={styles.profileContainer}>
-            <View style={styles.imgcontainer}>
-              {image && (
-                <Image
-                  source={{ uri: image }}
-                  style={{ width: 150, height: 150 }}
-                />
-              )}
+            <View style={{ position: "relative", zIndex: 1 }}>
+              <View style={styles.imgcontainer}>
+                {image && (
+                  <Image
+                    source={{ uri: image }}
+                    style={{ width: 150, height: 150 }}
+                  />
+                )}
+              </View>
               <View style={styles.uploadBtnContainer}>
                 <TouchableOpacity onPress={addImage}>
                   <AntDesign name="camera" size={28} color={"black"} />
@@ -189,23 +192,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imgcontainer: {
-    elevation: moderateScale(2),
+    // elevation: moderateScale(2),
     height: horizontalScale(140),
     width: verticalScale(150),
     backgroundColor: "#efefef",
     borderRadius: moderateScale(999),
     overflow: "hidden",
-    zIndex: 1,
+    // zIndex: -1,
     top: moderateScale(40),
+    position: "relative",
   },
   uploadBtnContainer: {
     opacity: moderateScale(0.7),
     position: "absolute",
-    left: horizontalScale(55),
+    left: horizontalScale(110),
     bottom: 0,
-    top: verticalScale(110),
-    zIndex: 1,
+    // top: 12,
   },
+
   inputTotalContainer: {
     backgroundColor: "rgba(47, 47, 47, 0.45)",
     paddingHorizontal: horizontalScale(25),

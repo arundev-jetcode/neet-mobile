@@ -88,6 +88,7 @@ const Rewards = () => {
                   </View>
                 </View>
               </View>
+
               <View style={{ top: moderateScale(25) }}>
                 <Button _text={styles.claim}>Claim</Button>
               </View>

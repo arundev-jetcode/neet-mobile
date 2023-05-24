@@ -60,7 +60,7 @@ const Ranking = () => {
             <View
               style={{
                 backgroundColor: "rgba(47, 47, 47, 0.45)",
-                width: 350,
+                width: 340,
                 borderRadius: 6,
               }}
             >
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   },
   rankingListDataContainer: {
     backgroundColor: Colors.white,
-    width: horizontalScale(250),
+    width: horizontalScale(240),
     height: verticalScale(55),
     borderRadius: moderateScale(6),
   },

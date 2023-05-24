@@ -93,6 +93,7 @@ const InputBox = ({
             selectedValue={service}
             accessibilityLabel="Choose Service"
             placeholder="Choose Service"
+            fontSize={moderateScale(15)}
             _selectedItem={{
               bg: "teal.600",
               endIcon: <CheckIcon size="5" />,
@@ -119,7 +120,7 @@ const InputBox = ({
             borderColor="transparent"
             placeholder={placeholderName}
             size={inputType}
-            style={{ fontSize: moderateScale(18) }}
+            style={{ fontSize: moderateScale(15) }}
           />
         </View>
       )}
