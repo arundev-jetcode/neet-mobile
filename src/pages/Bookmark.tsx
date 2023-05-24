@@ -52,7 +52,7 @@ const Bookmark = () => {
               <Text
                 style={{
                   color: Colors.white,
-                  fontSize: moderateScale(30),
+                  fontSize: moderateScale(24),
                   fontWeight: "bold",
                 }}
               >
@@ -68,7 +68,7 @@ const Bookmark = () => {
                 icon={faMagnifyingGlass}
                 style={{
                   position: "absolute",
-                  left: horizontalScale(270),
+                  left: horizontalScale(290),
                   bottom: verticalScale(16),
                   color: "#A0A0A0",
                 }}
@@ -85,7 +85,7 @@ const Bookmark = () => {
             >
               <Text
                 style={{
-                  fontSize: moderateScale(20),
+                  fontSize: moderateScale(17),
                   alignItems: "center",
                   justifyContent: "center",
                   color: Colors.white,

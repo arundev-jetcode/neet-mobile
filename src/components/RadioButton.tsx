@@ -23,11 +23,11 @@ const RadioButton = ({ labelName, options }: RadioButtonProps) => {
               <View style={Styles.container}>
                 <Radio
                   colorScheme="emerald"
-                  _text={{ fontSize: moderateScale(17) }}
+                  _text={{ fontSize: moderateScale(15) }}
                   value={res.value}
                   my={1}
                   key={index}
-                  size={5}
+                  size={4}
                   backgroundColor={"#707070"}
                 >
                   {res.label}

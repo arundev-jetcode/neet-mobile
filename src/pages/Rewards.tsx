@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Dimensions, ScrollView } from "react-native";
-import { Button } from "native-base";
+import { Button, stylingProps } from "native-base";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { LinearBgColor } from "../styles/Colors";
@@ -54,6 +54,8 @@ const Rewards = () => {
                   <Text style={styles.lifeScoreText}>Life time score</Text>
                   <Text style={styles.lifePoints}>8,000</Text>
                 </View>
+                <View style={styles.verticleLine}></View>
+
                 <View>
                   <Text style={styles.balanceText}>Balance points</Text>
                   <Text style={styles.balancePoints}>4,000</Text>
@@ -64,10 +66,12 @@ const Rewards = () => {
                 <Text style={styles.targetPoints}>3,110</Text>
               </View>
               <View style={styles.milestoneContainer}>
-                <View>
+                <View style={styles.milstoneText}>
                   <Text style={styles.commonfontSize}>Milestone</Text>
-                  <Text style={styles.commonfontSize}>points</Text>
+                  <Text style={styles.commonfontSize}>Points</Text>
                 </View>
+                <View style={styles.verticleLine}></View>
+
                 <View style={styles.subPointsContainer}>
                   <View>
                     <Text style={styles.subjectText}>Chemistry</Text>
@@ -124,9 +128,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     backgroundColor: "rgba(0, 71, 76, 0.67)",
-    paddingHorizontal: horizontalScale(18),
+    paddingHorizontal: horizontalScale(20),
     paddingVertical: verticalScale(40),
-    borderRadius: moderateScale(6),
+    borderRadius: moderateScale(10),
     paddingTop: verticalScale(100),
     position: "absolute",
     zIndex: -1,
@@ -146,7 +150,8 @@ const styles = StyleSheet.create({
     color: "white",
     letterSpacing: moderateScale(10),
     backgroundColor: "rgba(255, 255, 255, 0.19)",
-    // padding: moderateScale(5),
+    paddingVertical: moderateScale(5),
+    width: "100%",
   },
   currentPoints: {
     fontSize: moderateScale(30),
@@ -198,6 +203,7 @@ const styles = StyleSheet.create({
     letterSpacing: moderateScale(10),
     backgroundColor: "rgba(255, 255, 255, 0.19)",
     padding: moderateScale(5),
+    width: "100%",
   },
   targetPoints: {
     fontSize: moderateScale(30),
@@ -211,8 +217,11 @@ const styles = StyleSheet.create({
     // columnGap: moderateScale(30),
     alignItems: "center",
     justifyContent: "space-between",
-    // padding: moderateScale(5),
+    // padding: moderateScale(10),
     top: moderateScale(15),
+  },
+  milstoneText: {
+    padding: 5,
   },
   subPointsContainer: {
     display: "flex",
@@ -232,8 +241,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: moderateScale(12),
   },
   claim: {
-    fontSize: moderateScale(23),
-    textTransform: "uppercase",
+    borderWidth: 1,
+    borderRadius: 2,
+    borderColor: "#ddd",
+    borderBottomWidth: 0,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
   },
   commonColor: {
     color: Colors.white,
@@ -241,6 +257,11 @@ const styles = StyleSheet.create({
   commonfontSize: {
     fontSize: moderateScale(22),
     color: Colors.white,
+  },
+  verticleLine: {
+    height: "80%",
+    width: 3,
+    backgroundColor: "rgba(217, 217, 217, 0.38)",
   },
 });
 

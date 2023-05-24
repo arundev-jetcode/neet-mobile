@@ -119,7 +119,7 @@ const InputBox = ({
             borderColor="transparent"
             placeholder={placeholderName}
             size={inputType}
-            style={{ fontSize: 22 }}
+            style={{ fontSize: moderateScale(18) }}
           />
         </View>
       )}
