@@ -6,7 +6,11 @@ import { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import Login from "./src/pages/Login";
+import Otp from "./src/pages/Otp";
+import { LogBox } from "react-native";
 
+//Ignore all log notifications
+LogBox.ignoreAllLogs();
 export default function App() {
   const [appState, setAppState] = useState<any>({
     bgColor: "#00474C",
@@ -23,7 +27,8 @@ export default function App() {
         backgroundColor={appState.bgColor}
         style={appState.indicatorColor}
       />
-      <BottomBar setAppState={setAppState} />
+      {/* <BottomBar setAppState={setAppState} /> */}
+      <Otp />
       {/* <Login/> */}
       {/* <UploadImage/> */}
     </NativeBaseProvider>

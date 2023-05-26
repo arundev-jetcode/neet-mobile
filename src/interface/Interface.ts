@@ -28,3 +28,14 @@ labelName:string,
 options: {label: string ; value: string;}[]
 
 }
+
+export interface ButtonProps {
+
+  width:string,
+  height:string,
+  textSize:number,
+  color?:string,
+  text:string,
+  backgroundColor:string,
+  textColor:string
+}

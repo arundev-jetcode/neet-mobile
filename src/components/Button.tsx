@@ -1,26 +1,33 @@
-import { Box,Button } from "native-base";
+import { Box, Button } from "native-base";
 import React from "react";
 import { StyleSheet } from "react-native";
+import { ButtonProps } from "../interface/Interface";
 
-
-const Buttons =()=>{
-
-    return(
-        
-        <Button style={styles.container} fontSize={34}  onPress={() => console.log("hello world")}>Login</Button>
-      
-    )
-}
+const Buttons = (buttonProps: ButtonProps) => {
+  return (
+    <Button
+      style={styles.container}
+      width={buttonProps.width}
+      height={buttonProps.height}
+      fontSize={buttonProps.textSize}
+      color={buttonProps.color}
+      background={buttonProps.backgroundColor}
+      onPress={() => console.log("hello world")}
+    >
+      {buttonProps.text}
+    </Button>
+  );
+};
 const styles = StyleSheet.create({
-    container:{
-        marginTop: 12,
-        width: '80%',
-        height:50,
-        backgroundColor: "#003C31",
-       color:"red",
-       fontWeight:"bold",
-       fontSize:"80%",
-    }
-})
+  container: {
+    marginTop: 12,
+    // width: "80%",
+    // height: 50,
+    // backgroundColor: "",
+    color: "red",
+    fontWeight: "bold",
+    // fontSize: "80%",
+  },
+});
 
 export default Buttons;
