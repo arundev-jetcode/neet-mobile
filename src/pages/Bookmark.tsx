@@ -1,9 +1,13 @@
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Colors, { LinearBgColor } from "../styles/Colors";
-import StatusBar from "../components/StatusBar";
-import { Input } from "native-base";
 import {
   horizontalScale,
   moderateScale,
@@ -13,7 +17,11 @@ import InputBox from "../components/Input";
 import RadioButton from "../components/RadioButton";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { useNavigation } from "@react-navigation/native";
+import BookmarkNextScreen from "../screens/BookmarkScreen";
+
 const Bookmark = () => {
+  const navigation: any = useNavigation();
   const BackgroundImg = require("../assets/BgImg.png");
   const options = [
     { label: "Decreases", value: "a" },
@@ -59,22 +67,31 @@ const Bookmark = () => {
                 Notes
               </Text>
 
-              <InputBox
-                inputType={"text"}
-                placeholderName={"search"}
-                size={moderateScale(350)}
-              />
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
+              <View
                 style={{
-                  position: "absolute",
-                  left: horizontalScale(290),
-                  bottom: verticalScale(16),
-                  color: "#A0A0A0",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  backgroundColor: "#505352",
+                  borderRadius: 6,
                 }}
-              />
+              >
+                <InputBox
+                  inputType={"text"}
+                  placeholderName={"search"}
+                  size={moderateScale(30)}
+                />
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  style={{
+                    color: "#A0A0A0",
+                    right: moderateScale(12),
+                  }}
+                />
+              </View>
             </View>
-            <View
+            <Pressable
               style={{
                 marginTop: verticalScale(40),
                 backgroundColor: "rgba(0, 71, 76, 0.67)",
@@ -95,7 +112,7 @@ const Bookmark = () => {
               </Text>
               <RadioButton labelName={""} options={options} />
               <View></View>
-            </View>
+            </Pressable>
           </View>
         </ImageBackground>
       </LinearGradient>
