@@ -18,9 +18,13 @@ import Profile from "../pages/Profile";
 import Ranking from "../pages/Ranking";
 import Notification from "../pages/Notification";
 import Colors from "../styles/Colors";
+import { moderateScale } from "../styles/Responsive";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const BottomBar = ({ setAppState }: any) => {
   const Tab = createMaterialBottomTabNavigator();
+  const insets = useSafeAreaInsets();
+
   const bottombarDatas = [
     { iconName: "Home", icon: faHouse, screenName: Home },
     { iconName: "Bookmark", icon: faBookmark, screenName: Bookmark },
@@ -55,9 +59,18 @@ const BottomBar = ({ setAppState }: any) => {
   return (
     <NavigationContainer ref={navigationRef}>
       <Tab.Navigator
+        style={{
+          marginBottom: insets.bottom,
+          paddingBottom: insets.bottom,
+          paddingLeft: insets.left,
+          padding: insets.right,
+        }}
         initialRouteName="Home"
         activeColor={Colors.white}
-        barStyle={{ backgroundColor: Colors.darkGreen }}
+        barStyle={{
+          backgroundColor: Colors.darkGreen,
+          height: moderateScale(70),
+        }}
       >
         {bottombarDatas.map((res, i) => {
           return (

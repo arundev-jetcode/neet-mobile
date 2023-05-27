@@ -105,7 +105,13 @@ const Profile = () => {
       >
         <ImageBackground source={BackgroundImg} style={styles.Img}>
           <View style={styles.profileContainer}>
-            <View style={{ position: "relative", zIndex: 1 }}>
+            <View
+              style={{
+                zIndex: 1,
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
               <View style={styles.imgcontainer}>
                 {image && (
                   <Image
@@ -200,13 +206,16 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     // zIndex: -1,
     top: moderateScale(40),
-    position: "relative",
+    // position: "relative",
   },
   uploadBtnContainer: {
     opacity: moderateScale(0.7),
-    position: "absolute",
-    left: horizontalScale(110),
+    // position: "absolute",
+    // left: horizontalScale(110),
     bottom: 0,
+    top: moderateScale(150),
+    right: moderateScale(40),
+
     // top: 12,
   },
 

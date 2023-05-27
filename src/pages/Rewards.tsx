@@ -241,17 +241,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(217, 217, 217, 0.59)",
     paddingHorizontal: moderateScale(12),
   },
-  claim: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
-    borderBottomWidth: 0,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 1,
-  },
+  claim: {},
   commonColor: {
     color: Colors.white,
   },
