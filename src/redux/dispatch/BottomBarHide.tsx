@@ -1,9 +1,9 @@
 import React from "react";
 import ActionType from "../Actiontype";
 
-const HideBottomBar = (hide: boolean) => {
+const HideBottomBar = (statusbar: {}) => {
   return {
-    type: ActionType.HIDE_BOTTOM_NAV,
-    payload: hide,
+    type: ActionType.STATUS_BAR,
+    payload: statusbar,
   };
 };

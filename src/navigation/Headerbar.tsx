@@ -4,6 +4,7 @@ import ModalBox from "../components/Modal";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Colors from "../styles/Colors";
 import { HeaderMenuprops } from "../interface/Interface";
+import { Pressable } from "native-base";
 
 const HeaderBar = () => {
   const [modelData, setModelData] = useState<HeaderMenuprops[]>([]);
@@ -46,9 +47,9 @@ const HeaderBar = () => {
         {headerIcons.map((res, index) => {
           return (
             <View key={index}>
-              <TouchableOpacity onPress={() => handleClick(index)}>
+              <Pressable onPress={() => handleClick(index)}>
                 <Image source={res.icon} style={HeaderMenuStyle.imageStyle} />
-              </TouchableOpacity>
+              </Pressable>
             </View>
           );
         })}

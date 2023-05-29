@@ -2,15 +2,19 @@ import React from "react";
 import ActionType from "../Actiontype";
 
 const initialValue = {
-  hide: false,
+  statusbar: {
+    bgColor: "#00474C",
+    indicatorColor: "light",
+    translucent: true,
+  },
 };
 
 const Reducer = (state = initialValue, { type, payload }: any) => {
   switch (type) {
-    case ActionType.HIDE_BOTTOM_NAV:
+    case ActionType.STATUS_BAR:
       return {
         ...initialValue,
-        payload: initialValue.hide,
+        payload: initialValue.statusbar,
       };
     default:
       return state;

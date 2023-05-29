@@ -1,15 +1,20 @@
-import React from "react";
-import { Image, View, Text } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Image, View, Text, Pressable } from "react-native";
 import { Button, Center, Modal } from "native-base";
 import { ModalProps } from "../interface/Interface";
-
+import { useNavigation } from "@react-navigation/native";
 const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
+  const navigation: any = useNavigation();
+  const Navigate = () => {
+    console.log("clickkkku");
+    navigation.navigate("Test");
+  };
   return (
     <Center>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <Modal.Content
           maxWidth="304"
-          maxH="246"
+          maxH="300"
           style={{ backgroundColor: "rgba(255,255,255, 0.7)" }}
         >
           <Modal.CloseButton />
@@ -19,7 +24,7 @@ const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
           <Modal.Body style={{ padding: 10 }}>
             {modelData.map((res, index) => {
               return (
-                <View key={index}>
+                <Pressable key={index} onPress={Navigate}>
                   <View
                     style={{
                       display: "flex",
@@ -35,7 +40,7 @@ const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
                     <Image source={res.img} style={{ width: 30, height: 30 }} />
                     <Text style={{ fontSize: 20 }}>{res.sub}</Text>
                   </View>
-                </View>
+                </Pressable>
               );
             })}
           </Modal.Body>

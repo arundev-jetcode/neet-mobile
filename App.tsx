@@ -9,20 +9,21 @@ import Login from "./src/pages/Login";
 import Otp from "./src/pages/Otp";
 import { LogBox } from "react-native";
 import ScreenNavigation from "./src/navigation/ScreenNaigation";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import Store from "./src/redux/store/Store";
+import { Provider } from "react-redux";
 //Ignore all log notifications
 LogBox.ignoreAllLogs();
 export default function App() {
   const [appState, setAppState] = useState<any>({
     bgColor: "#00474C",
     indicatorColor: "light",
-    translucent: false,
+    translucent: true,
   });
 
   // console.log(SplashScreen.Logs,"log")
 
-  console.log(appState);
+  console.log(appState, "appppppppppp");
 
   return (
     <NativeBaseProvider>
@@ -30,13 +31,14 @@ export default function App() {
         backgroundColor={appState.bgColor}
         style={appState.indicatorColor}
       />
-      {/* <Provider store={Store}> */}
-      <BottomBar setAppState={setAppState} />
-      {/* <ScreenNavigation /> */}
-      {/* <Otp /> */}
-      {/* <Login/> */}
-      {/* <UploadImage/> */}
-      {/* </Provider> */}
+      <Provider store={Store}>
+        <ScreenNavigation setAppState={setAppState} />
+        {/* <BottomBar setAppState={setAppState} /> */}
+
+        {/* <Otp /> */}
+        {/* <Login/> */}
+        {/* <UploadImage/> */}
+      </Provider>
     </NativeBaseProvider>
   );
 }

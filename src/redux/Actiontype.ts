@@ -1,7 +1,7 @@
 
 const ActionType ={
 
-    HIDE_BOTTOM_NAV:"HIDE_BOTTOM_NAV"
+    STATUS_BAR:"STATUS_BAR"
 
 }
 
