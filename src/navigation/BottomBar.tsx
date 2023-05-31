@@ -18,9 +18,12 @@ import Profile from "../pages/Profile";
 import Ranking from "../pages/Ranking";
 import Notification from "../pages/Notification";
 import Colors from "../styles/Colors";
+import { DefaultTheme, Provider } from "react-native-paper";
+import { ThemeContext } from "../../App";
 
-const BottomBar = ({ setAppState }: any) => {
+const BottomBar = () => {
   const Tab = createMaterialBottomTabNavigator();
+  const [appState, setAppState] = React.useContext(ThemeContext);
   const bottombarDatas = [
     { iconName: "Home", icon: faHouse, screenName: Home },
     { iconName: "Bookmark", icon: faBookmark, screenName: Bookmark },
@@ -29,31 +32,17 @@ const BottomBar = ({ setAppState }: any) => {
     { iconName: "Profile", icon: faUser, screenName: Profile },
     { iconName: "Ranking", icon: faRankingStar, screenName: Ranking },
   ];
+  const theme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      secondaryContainer: "transparent", // Use transparent to disable the little highlighting oval
+    },
+  };
 
-  let navigationRef = useNavigationContainerRef();
-  navigationRef.addListener("state", (e) => {
-    // You can get the raw navigation state (partial state object of the root navigator)
-
-    // Or get the full state object with `getRootState()`
-
-    let route = navigationRef.getCurrentRoute();
-
-    if (route) {
-      switch (route.name) {
-        case "Home":
-          setAppState({ bgColor: "#00474C", indicatorColor: "light" });
-          break;
-        default:
-          setAppState({
-            bgColor: "transparent",
-            indicatorColor: "light",
-          });
-          break;
-      }
-    }
-  });
   return (
-    <NavigationContainer ref={navigationRef}>
+    <Provider theme={theme}>
+      {/* <NavigationContainer ref={navigationRef}> */}
       <Tab.Navigator
         initialRouteName="Home"
         activeColor={Colors.white}
@@ -79,7 +68,8 @@ const BottomBar = ({ setAppState }: any) => {
           );
         })}
       </Tab.Navigator>
-    </NavigationContainer>
+      {/* </NavigationContainer> */}
+    </Provider>
   );
 };
 

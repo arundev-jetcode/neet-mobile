@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ImageBackground } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Colors, { LinearBgColor } from "../styles/Colors";
 import StatusBar from "../components/StatusBar";
@@ -13,8 +13,14 @@ import InputBox from "../components/Input";
 import RadioButton from "../components/RadioButton";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { ThemeContext } from "../../App";
 const Bookmark = () => {
   const BackgroundImg = require("../assets/BgImg.png");
+  // const [appState, setAppState] = React.useContext(ThemeContext);
+  // console.log(appState, "apppStata");
+  // useEffect(() => {
+  //   setAppState({ bgColor: "red", indicatorColor: "light" });
+  // }, []);
   const options = [
     { label: "Decreases", value: "a" },
     { label: "Increases", value: "b" },
