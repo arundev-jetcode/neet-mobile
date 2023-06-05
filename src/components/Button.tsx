@@ -12,7 +12,7 @@ const Buttons = (buttonProps: ButtonProps) => {
       fontSize={buttonProps.textSize}
       color={buttonProps.color}
       background={buttonProps.backgroundColor}
-      onPress={() => console.log("hello world")}
+      onPress={buttonProps.callback}
     >
       {buttonProps.text}
     </Button>

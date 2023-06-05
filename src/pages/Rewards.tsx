@@ -21,7 +21,6 @@ const Rewards = () => {
   const RewardsImg = require("../assets/Rewards.png");
 
   console.log("width, height", screenWidth, screenHeight);
-
   return (
     <>
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
@@ -251,6 +250,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 1,
+    boxShadow: "inSet 10 16 27 7 rgba(197,255,244,0.48)",
   },
   commonColor: {
     color: Colors.white,

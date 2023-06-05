@@ -8,7 +8,7 @@ import {
   verticalScale,
 } from "../styles/Responsive";
 
-const RadioButton = ({ labelName, options }: RadioButtonProps) => {
+const RadioButton = ({ labelName, options, report }: RadioButtonProps) => {
   const [value, setValue] = React.useState("one");
   return (
     <>
@@ -17,7 +17,7 @@ const RadioButton = ({ labelName, options }: RadioButtonProps) => {
         name="exampleGroup"
         accessibilityLabel="favorite colorscheme"
       >
-        {options.map((res, index) => {
+        {options?.map((res, index) => {
           return (
             <>
               <View style={Styles.container}>
@@ -37,6 +37,33 @@ const RadioButton = ({ labelName, options }: RadioButtonProps) => {
           );
         })}
       </Radio.Group>
+      {
+        <Radio.Group
+          defaultValue="1"
+          name="exampleGroup"
+          accessibilityLabel="favorite colorscheme"
+        >
+          {report?.map((res, index) => {
+            return (
+              <>
+                <View style={Styles.container}>
+                  <Radio
+                    colorScheme="emerald"
+                    _text={{ fontSize: moderateScale(15) }}
+                    value={res.value}
+                    my={1}
+                    key={index}
+                    size={4}
+                    backgroundColor={"#707070"}
+                  >
+                    {res.label}
+                  </Radio>
+                </View>
+              </>
+            );
+          })}
+        </Radio.Group>
+      }
     </>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import BottomBar from "./BottomBar";
 import Test from "../screens/Test";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SecondTest from "../screens/SecondTest";
 
 const StackNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -16,8 +17,14 @@ const StackNavigation = () => {
       />
       <Stack.Screen
         options={{ headerShown: false }}
-      
-      name="Test" component={Test} />
+        name="Test"
+        component={Test}
+      />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="SecondTest"
+        component={SecondTest}
+      />
     </Stack.Navigator>
     // </NavigationContainer>
   );

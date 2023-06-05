@@ -4,15 +4,14 @@ import { Button, Center, Modal, Pressable } from "native-base";
 import { ModalProps, RadioButtonProps } from "../interface/Interface";
 import { useNavigation } from "@react-navigation/native";
 import RadioButton from "./RadioButton";
-const ModalBox = ({ showModal,modelData, setShowModal,popUpModal}: ModalProps) => {
-  const options = [
-    { label: "Incorrect answer", value: "inc" },
-    { label: "Out of syllabus", value: "out" },
-    { label: "Spelling mistake", value: "spelling" },
-    { label: "Incorrect Explaination", value: "ince" },
-  ];
+const ModalBox = ({
+  showModal,
+  modelData,
+  setShowModal,
+  report,
+}: ModalProps) => {
   const navigation: any = useNavigation();
-  console.log(modelData,"modalData")
+  console.log(modelData, "modalData");
   const Navigate = () => {
     console.log("clickkkku");
     navigation.navigate("Test");
@@ -45,15 +44,18 @@ const ModalBox = ({ showModal,modelData, setShowModal,popUpModal}: ModalProps) =
                       borderRadius: 9,
                     }}
                   >
-                   {res.img && <Image source={res.img} style={{ width: 30, height: 30 }} />} 
+                    {res.img && (
+                      <Image
+                        source={res.img}
+                        style={{ width: 30, height: 30 }}
+                      />
+                    )}
                     <Text style={{ fontSize: 20 }}>{res.sub}</Text>
-
                   </View>
                 </Pressable>
               );
             })}
-                    <RadioButton labelName={""} options={options}  />
-
+            {report ? <RadioButton labelName={""} report={report} /> : ""}
           </Modal.Body>
         </Modal.Content>
       </Modal>

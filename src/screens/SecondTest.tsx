@@ -22,9 +22,9 @@ import { useNavigation } from "@react-navigation/native";
 import ModalBox from "../components/Modal";
 import Buttons from "../components/Button";
 
-const Test = () => {
+const SecondTest = () => {
   const BackgroundImg = require("../assets/BgImg.png");
-  const navigate = useNavigation<any>();
+  const navigate = useNavigation();
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModelData] = useState<any>([]);
 
@@ -40,9 +40,6 @@ const Test = () => {
     { label: "Spelling mistake", value: "spelling" },
     { label: "Incorrect Explaination", value: "ince" },
   ];
-  const ResultPage = () => {
-    navigate.navigate("SecondTest");
-  };
   const OpenReport = (data: number) => {
     switch (data) {
       case 0:
@@ -151,9 +148,8 @@ const Test = () => {
               height={"50"}
               textSize={0}
               text={"Check"}
-              backgroundColor={"#ffffff"}
+              backgroundColor={"green"}
               textColor={"red"}
-              callback={ResultPage}
             />
           </View>
         </ImageBackground>
@@ -162,7 +158,7 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default SecondTest;
 
 const styles = StyleSheet.create({
   container: {
