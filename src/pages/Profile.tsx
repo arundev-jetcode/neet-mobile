@@ -9,12 +9,10 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { LinearBgColor } from "../styles/Colors";
-import StatusBar from "../components/StatusBar";
 import { faCamera, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import InputBox from "../components/Input";
-import React, { useState, useEffect } from "react";
-// import { Image, View, Platform, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import Colors from "../styles/Colors";
@@ -24,7 +22,6 @@ import {
   verticalScale,
   moderateScale,
 } from "../styles/Responsive";
-import { ZStack } from "native-base";
 const Profile = () => {
   const [image, setImage] = useState<any>(null);
 
@@ -36,9 +33,7 @@ const Profile = () => {
       quality: 1,
     });
 
-    // console.log(JSON.stringify(_image));
     if (!_image.canceled) {
-      // setImage(_image);
       _image.assets.map((res) => {
         console.log(res.uri);
         setImage(res.uri);
@@ -193,10 +188,10 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height: horizontalScale(140),
+    height: horizontalScale(120),
     width: verticalScale(150),
     backgroundColor: "#efefef",
-    borderRadius: moderateScale(999),
+    borderRadius: moderateScale(100),
     overflow: "hidden",
     // zIndex: -1,
     top: moderateScale(40),

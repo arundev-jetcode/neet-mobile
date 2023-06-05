@@ -14,7 +14,10 @@ const StackNavigation = () => {
         options={{ headerShown: false }}
         component={BottomBar}
       />
-      <Stack.Screen name="Test" component={Test} />
+      <Stack.Screen
+        options={{ headerShown: false }}
+      
+      name="Test" component={Test} />
     </Stack.Navigator>
     // </NavigationContainer>
   );

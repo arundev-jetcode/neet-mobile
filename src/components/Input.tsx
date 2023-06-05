@@ -109,7 +109,7 @@ const InputBox = ({
       ) : (
         <View
           style={{
-            marginTop: 12,
+            marginTop: !inputsize ? 12:0,
             width: inputsize ? verticalScale(340) : verticalScale(300),
             backgroundColor: inputsize ? "#505352" : "white",
             borderRadius: moderateScale(6),
@@ -119,7 +119,7 @@ const InputBox = ({
             type={inputType}
             borderColor="transparent"
             placeholder={placeholderName}
-            size={inputType}
+            // size={inputType}
             style={{ fontSize: moderateScale(15) }}
           />
         </View>

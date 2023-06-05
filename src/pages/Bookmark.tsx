@@ -65,6 +65,8 @@ const Bookmark = () => {
                 Notes
               </Text>
 
+              <View style={{display:"flex",backgroundColor:"#505352",flexDirection:"row",alignItems:"center",justifyContent:"center",paddingHorizontal:10}}>
+
               <InputBox
                 inputType={"text"}
                 placeholderName={"search"}
@@ -73,12 +75,11 @@ const Bookmark = () => {
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
                 style={{
-                  position: "absolute",
-                  left: horizontalScale(290),
-                  bottom: verticalScale(16),
+                  
                   color: "#A0A0A0",
                 }}
               />
+              </View>
             </View>
             <View
               style={{

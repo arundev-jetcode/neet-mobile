@@ -1,10 +1,18 @@
 import React from "react";
 import { Image, View, Text } from "react-native";
 import { Button, Center, Modal, Pressable } from "native-base";
-import { ModalProps } from "../interface/Interface";
+import { ModalProps, RadioButtonProps } from "../interface/Interface";
 import { useNavigation } from "@react-navigation/native";
-const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
+import RadioButton from "./RadioButton";
+const ModalBox = ({ showModal,modelData, setShowModal,popUpModal}: ModalProps) => {
+  const options = [
+    { label: "Incorrect answer", value: "inc" },
+    { label: "Out of syllabus", value: "out" },
+    { label: "Spelling mistake", value: "spelling" },
+    { label: "Incorrect Explaination", value: "ince" },
+  ];
   const navigation: any = useNavigation();
+  console.log(modelData,"modalData")
   const Navigate = () => {
     console.log("clickkkku");
     navigation.navigate("Test");
@@ -22,7 +30,7 @@ const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
             icons
           </Modal.Header>
           <Modal.Body>
-            {modelData.map((res, index) => {
+            {modelData?.map((res, index) => {
               return (
                 <Pressable key={index} onPress={Navigate}>
                   <View
@@ -37,12 +45,15 @@ const ModalBox = ({ showModal, modelData, setShowModal }: ModalProps) => {
                       borderRadius: 9,
                     }}
                   >
-                    <Image source={res.img} style={{ width: 30, height: 30 }} />
+                   {res.img && <Image source={res.img} style={{ width: 30, height: 30 }} />} 
                     <Text style={{ fontSize: 20 }}>{res.sub}</Text>
+
                   </View>
                 </Pressable>
               );
             })}
+                    <RadioButton labelName={""} options={options}  />
+
           </Modal.Body>
         </Modal.Content>
       </Modal>

@@ -3,11 +3,11 @@ import { Text, View, TouchableOpacity, Image, StyleSheet } from "react-native";
 import ModalBox from "../components/Modal";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Colors from "../styles/Colors";
-import { HeaderMenuprops } from "../interface/Interface";
+import { PopupModal } from "../interface/Interface";
 import { Pressable } from "native-base";
 
 const HeaderBar = () => {
-  const [modelData, setModelData] = useState<HeaderMenuprops[]>([]);
+  const [modelData, setModelData] = useState<PopupModal[]>([]);
   const [showModal, setShowModal] = useState(false);
   const insets = useSafeAreaInsets();
   const Botany = require("../assets/botany.png");

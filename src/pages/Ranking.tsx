@@ -130,10 +130,10 @@ const styles = StyleSheet.create({
   },
   firstRank: {
     elevation: moderateScale(2),
-    height: verticalScale(130),
-    width: horizontalScale(125),
+    height: verticalScale(120),
+    width: horizontalScale(100),
     backgroundColor: Colors.white,
-    borderRadius: moderateScale(999),
+    borderRadius: moderateScale(100),
     overflow: "hidden",
     zIndex: 1,
     top: verticalScale(100),
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   commonRank: {
     elevation: moderateScale(2),
     height: verticalScale(100),
-    width: horizontalScale(95),
+    width: horizontalScale(85),
     backgroundColor: Colors.white,
     borderRadius: moderateScale(999),
     overflow: "hidden",
@@ -162,13 +162,13 @@ const styles = StyleSheet.create({
   rankingListProfileCard: {
     backgroundColor: Colors.white,
     width: horizontalScale(55),
-    height: verticalScale(55),
+    height: verticalScale(67),
     borderRadius: moderateScale(6),
   },
   rankingListDataContainer: {
     backgroundColor: Colors.white,
     width: horizontalScale(240),
-    height: verticalScale(55),
+    height: verticalScale(67),
     borderRadius: moderateScale(6),
   },
   rankingDatacard: {

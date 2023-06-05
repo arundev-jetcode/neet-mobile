@@ -1,14 +1,20 @@
 
+
 export interface ModalProps{
     showModal:boolean,
-    modelData:HeaderMenuprops[],
-    setShowModal:(open: boolean) => void
+    modelData?:PopupModal[],
+    setShowModal:(open: boolean) => void,
+    popUpModal?:RadioButtonProps
   }
 
-  export interface HeaderMenuprops {
-    id:number,
-    img:HTMLImageElement,
-    sub:string
+  export interface PopupModal {
+    id?:number,
+    img?:any ,
+    sub?:string,
+    report?:string,
+    value?:string,
+    label?:string
+
 }
 
 export interface LoginProps {
@@ -17,14 +23,14 @@ export interface LoginProps {
   placeholderName: string | undefined,
   componentName?:string,
   fieldType?:string,
-  value?:string | undefined,
+  value?:string |undefined,
   label?:string[] | undefined,
   size?:number
 }
 
 
 export interface RadioButtonProps {
-labelName:string,
+labelName?:string,
 options: {label: string ; value: string;}[]
 
 }
