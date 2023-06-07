@@ -1,9 +1,8 @@
-import { View, Text, StyleSheet, ImageBackground, Button } from "react-native";
+import { View, Text, StyleSheet, ImageBackground, Button,Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Colors, { LinearBgColor } from "../styles/Colors";
-import StatusBar from "../components/StatusBar";
-import { Input, Pressable } from "native-base";
+import {  Pressable } from "react-native";
 import {
   horizontalScale,
   moderateScale,
@@ -21,6 +20,9 @@ import { ThemeContext } from "../../App";
 import { useNavigation } from "@react-navigation/native";
 import ModalBox from "../components/Modal";
 import Buttons from "../components/Button";
+import {SvgXml} from 'react-native-svg';
+import ArrowSvg from "../components/ArrowSvg";
+// import arrow from "../assets/arrow-progress-bar.svg"
 
 const SecondTest = () => {
   const BackgroundImg = require("../assets/BgImg.png");
@@ -86,6 +88,7 @@ const SecondTest = () => {
                 marginTop: verticalScale(70),
               }}
             >
+         <ArrowSvg/>
               <Pressable
                 onPress={() => navigate.goBack()}
                 style={{
@@ -136,12 +139,17 @@ const SecondTest = () => {
                   color={Colors.yellow}
                 />
                 <Text style={{ color: Colors.white }}>Report issue</Text>
+                
                 <ModalBox
                   setShowModal={setShowModal}
                   showModal={showModal}
                   report={report}
                 />
               </Pressable>
+              <View>
+                  <Text style={{marginTop:12,color:Colors.white,fontWeight:'800'}} >Explaination</Text>
+                  <Text>If a soap bubble expands, the pressure inside the bubbleIf a If a soap bubble expands, the pressure inside bubble soap bubble expands,the pressure inside the bubble.pressure inside bubble soap bubble expands,the pressure inside the bubbleIf a soap bubble expands, the pressure inside the bubbleIf a If a soap bubble expands, the pressure inside bubble soap bubble expands,the pressure inside the bubble.pressure inside bubble soap bubble expands,the pressure inside the bubble</Text>
+                </View>
             </View>
             <Buttons
               width={"100"}

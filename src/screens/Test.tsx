@@ -21,6 +21,7 @@ import { ThemeContext } from "../../App";
 import { useNavigation } from "@react-navigation/native";
 import ModalBox from "../components/Modal";
 import Buttons from "../components/Button";
+import ArrowSvg from "../components/ArrowSvg";
 
 const Test = () => {
   const BackgroundImg = require("../assets/BgImg.png");
@@ -84,6 +85,7 @@ const Test = () => {
               alignItems: "center",
             }}
           >
+            <ArrowSvg/>
             <View
               style={{
                 marginTop: verticalScale(70),

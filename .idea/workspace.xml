@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19781dc0-36b4-46b4-b45b-196aa9229259" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/ScreenNaigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/ScreenNaigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Bookmark.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Bookmark.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Ranking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ranking.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SecondTest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SecondTest.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
