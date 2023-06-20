@@ -16,6 +16,7 @@ import {
   verticalScale,
 } from "../styles/Responsive";
 import Colors from "../styles/Colors";
+import { heightPercentageToDP, widthPercentageToDP } from "react-native-responsive-screen";
 
 const Ranking = () => {
   const BackgroundImg = require("../assets/BgImg.png");
@@ -130,8 +131,8 @@ const styles = StyleSheet.create({
   },
   firstRank: {
     elevation: moderateScale(2),
-    height: verticalScale(120),
-    width: horizontalScale(100),
+    height: heightPercentageToDP("15%"),
+    width: widthPercentageToDP("30%"),
     backgroundColor: Colors.white,
     borderRadius: moderateScale(100),
     overflow: "hidden",
@@ -140,8 +141,8 @@ const styles = StyleSheet.create({
   },
   commonRank: {
     elevation: moderateScale(2),
-    height: verticalScale(100),
-    width: horizontalScale(85),
+    height: heightPercentageToDP("10%"),
+    width: widthPercentageToDP("20%"),
     backgroundColor: Colors.white,
     borderRadius: moderateScale(999),
     overflow: "hidden",
