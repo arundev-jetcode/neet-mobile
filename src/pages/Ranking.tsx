@@ -4,6 +4,7 @@ import {
   StyleSheet,
   ScrollView,
   useWindowDimensions,
+  Dimensions,
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -16,10 +17,13 @@ import {
   verticalScale,
 } from "../styles/Responsive";
 import Colors from "../styles/Colors";
-
+const width = Dimensions.get("screen").width;
+const height = Dimensions.get("screen").height;
 const Ranking = () => {
   const BackgroundImg = require("../assets/BgImg.png");
 
+  console.log(width, "widthhhhh");
+  console.log(height, "height");
   const RankingList = [
     { name: "Jhone wick", points: "180P", rank: "4th" },
     { name: "Ram", points: "180P", rank: "5th" },
@@ -131,7 +135,7 @@ const styles = StyleSheet.create({
   firstRank: {
     elevation: moderateScale(2),
     height: verticalScale(120),
-    width: horizontalScale(100),
+    width: width / 3.3,
     backgroundColor: Colors.white,
     borderRadius: moderateScale(100),
     overflow: "hidden",
@@ -141,7 +145,7 @@ const styles = StyleSheet.create({
   commonRank: {
     elevation: moderateScale(2),
     height: verticalScale(100),
-    width: horizontalScale(85),
+    width: width / 3.9,
     backgroundColor: Colors.white,
     borderRadius: moderateScale(999),
     overflow: "hidden",

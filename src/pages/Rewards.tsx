@@ -19,8 +19,8 @@ import {
 const Rewards = () => {
   const BackgroundImg = require("../assets/BgImg.png");
   const RewardsImg = require("../assets/Rewards.png");
-
   console.log("width, height", screenWidth, screenHeight);
+
   return (
     <>
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
