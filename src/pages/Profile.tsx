@@ -22,6 +22,7 @@ import {
   verticalScale,
   moderateScale,
 } from "../styles/Responsive";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const Profile = () => {
   const [image, setImage] = useState<any>(null);
 
@@ -188,12 +189,11 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height: horizontalScale(120),
-    width: verticalScale(150),
+    height: verticalScale(150),
+    width: horizontalScale(140),
     backgroundColor: "#efefef",
-    borderRadius: moderateScale(100),
+    borderRadius: moderateScale(75),
     overflow: "hidden",
-    // zIndex: -1,
     top: moderateScale(40),
     position: "relative",
   },
@@ -202,7 +202,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: horizontalScale(110),
     bottom: 0,
-    // top: 12,
   },
 
   inputTotalContainer: {

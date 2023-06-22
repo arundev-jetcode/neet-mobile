@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   rewardsContainer: {
-    flex: 1,
+    flex: 4,
     alignItems: "center",
     justifyContent: "center",
     // bottom: hp(6),
