@@ -7,7 +7,10 @@ import {
   moderateScale,
   verticalScale,
 } from "../styles/Responsive";
-
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 const RadioButton = ({ labelName, options, report }: RadioButtonProps) => {
   const [value, setValue] = React.useState("one");
   return (
@@ -49,7 +52,7 @@ const RadioButton = ({ labelName, options, report }: RadioButtonProps) => {
                 <View style={Styles.container}>
                   <Radio
                     colorScheme="emerald"
-                    _text={{ fontSize: moderateScale(15) }}
+                    _text={{ fontSize: hp("1%") }}
                     value={res.value}
                     my={1}
                     key={index}
@@ -71,10 +74,10 @@ const RadioButton = ({ labelName, options, report }: RadioButtonProps) => {
 const Styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffff",
-    marginTop: verticalScale(12),
-    width: horizontalScale(293),
-    padding: moderateScale(7),
-    borderRadius: moderateScale(30),
+    marginTop: hp("1.4%"),
+    width: wp("80%"),
+    padding: hp("1%"),
+    borderRadius: hp(30),
   },
 });
 export default RadioButton;

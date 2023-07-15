@@ -22,7 +22,10 @@ import {
   verticalScale,
   moderateScale,
 } from "../styles/Responsive";
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 const Profile = () => {
   const [image, setImage] = useState<any>(null);
 
@@ -86,7 +89,6 @@ const Profile = () => {
   return (
     <>
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
-
       <LinearGradient
         colors={[
           LinearBgColor.hospitalblue1,
@@ -141,7 +143,6 @@ const Profile = () => {
                 <Text style={styles.nameClass}>Arun dev</Text>
                 <Text style={styles.nameClass}>12th</Text>
               </View>
-
               <View style={styles.profileInfoIcon}>
                 <Text style={styles.profileInfoText}>Profile Info</Text>
                 <FontAwesomeIcon
@@ -178,8 +179,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   Img: {
-    width: "100%",
-    height: "100%",
+    width: wp("100%"),
+    height: hp("100%"),
     resizeMode: "stretch",
   },
   profileContainer: {
@@ -189,12 +190,12 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height: verticalScale(150),
-    width: horizontalScale(140),
+    height: hp("17%"),
+    width: wp("35%"),
     backgroundColor: "#efefef",
     borderRadius: moderateScale(75),
     overflow: "hidden",
-    top: moderateScale(40),
+    top: hp("4%"),
     position: "relative",
   },
   uploadBtnContainer: {
@@ -203,13 +204,12 @@ const styles = StyleSheet.create({
     left: horizontalScale(110),
     bottom: 0,
   },
-
   inputTotalContainer: {
     backgroundColor: "rgba(47, 47, 47, 0.45)",
-    paddingHorizontal: horizontalScale(25),
-    paddingVertical: verticalScale(20),
-    paddingTop: verticalScale(50),
-    borderRadius: moderateScale(6),
+    paddingHorizontal: wp("6%"),
+    paddingVertical: hp("2%"),
+    paddingTop: hp("5%"),
+    borderRadius: 6,
     position: "relative",
   },
   profileInfoIcon: {
@@ -218,13 +218,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   profileInfoText: {
-    fontSize: moderateScale(21),
+    fontSize: hp("3%"),
     fontWeight: "bold",
     color: Colors.white,
   },
   nameClass: {
     textAlign: "center",
-    fontSize: moderateScale(20),
+    fontSize: hp("2.6%"),
     color: Colors.white,
   },
 });

@@ -18,26 +18,21 @@ import {
   moderateScale,
   verticalScale,
 } from "../styles/Responsive";
-
-const InputBox = ({
-  inputType,
-  placeholderName,
-  componentName,
-  fieldType,
-  value,
-  label,
-  size,
-}: LoginProps) => {
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+const InputBox = (props: LoginProps) => {
   const [service, setService] = React.useState("");
   const [show, setShow] = React.useState(false);
-  const inputsize = size;
-  if (placeholderName) {
+  const inputsize = props?.size;
+  if (props?.placeholderName) {
   }
   return (
     <>
-      {componentName === "Login" ? (
+      {props?.componentName === "Login" ? (
         <View style={styles.container}>
-          {"username" == placeholderName ? (
+          {"username" == props?.placeholderName ? (
             <Input
               placeholder="username"
               style={styles.input}
@@ -45,7 +40,7 @@ const InputBox = ({
               InputLeftElement={
                 <Icon
                   as={
-                    "username" == placeholderName ? (
+                    "username" == props?.placeholderName ? (
                       <FontAwesomeIcon
                         icon={faUser}
                         style={{ marginLeft: 12 }}
@@ -86,14 +81,14 @@ const InputBox = ({
         ""
       )}
 
-      {fieldType === "select" ? (
+      {props?.fieldType === "select" ? (
         <View style={styles.container}>
           <Select
             borderColor="transparent"
             selectedValue={service}
             accessibilityLabel="Choose Service"
             placeholder="Choose Service"
-            fontSize={moderateScale(15)}
+            fontSize={wp("4%")}
             _selectedItem={{
               bg: "teal.600",
               endIcon: <CheckIcon size="5" />,
@@ -101,24 +96,24 @@ const InputBox = ({
             mt={1}
             onValueChange={(itemValue) => setService(itemValue)}
           >
-            {label?.map((res, index) => {
-              return <Select.Item label={res} value={value} />;
+            {props?.label?.map((res, index) => {
+              return <Select.Item label={res} value={props?.value} />;
             })}
           </Select>
         </View>
       ) : (
         <View
           style={{
-            marginTop: !inputsize ? 12:0,
+            marginTop: !inputsize ? 12 : 0,
             width: inputsize ? verticalScale(340) : verticalScale(300),
             backgroundColor: inputsize ? "#505352" : "white",
             borderRadius: moderateScale(6),
           }}
         >
           <Input
-            type={inputType}
+            type={props?.inputType}
             borderColor="transparent"
-            placeholder={placeholderName}
+            placeholder={props?.placeholderName}
             // size={inputType}
             style={{ fontSize: moderateScale(15) }}
           />
@@ -131,13 +126,13 @@ const InputBox = ({
 const styles = StyleSheet.create({
   container: {
     marginTop: 12,
-    width: verticalScale(300),
+    width: wp("76%"),
     backgroundColor: "white",
-    borderRadius: moderateScale(6),
+    borderRadius: 6,
   },
   input: {
-    height: verticalScale(50),
-    fontSize: moderateScale(20),
+    height: hp("20%"),
+    fontSize: hp("50%"),
     alignItems: "center",
   },
   username: {

@@ -14,6 +14,10 @@ import RadioButton from "../components/RadioButton";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ThemeContext } from "../../App";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 const Bookmark = () => {
   const BackgroundImg = require("../assets/BgImg.png");
   // const [appState, setAppState] = React.useContext(ThemeContext);
@@ -52,47 +56,54 @@ const Bookmark = () => {
           >
             <View
               style={{
-                marginTop: verticalScale(70),
+                marginTop: hp("9%"),
               }}
             >
               <Text
                 style={{
                   color: Colors.white,
-                  fontSize: moderateScale(24),
+                  fontSize: hp("3%"),
                   fontWeight: "bold",
                 }}
               >
                 Notes
               </Text>
 
-              <View style={{display:"flex",backgroundColor:"#505352",flexDirection:"row",alignItems:"center",justifyContent:"center",paddingHorizontal:10}}>
-
-              <InputBox
-                inputType={"text"}
-                placeholderName={"search"}
-                size={moderateScale(350)}
-              />
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
+              <View
                 style={{
-                  
-                  color: "#A0A0A0",
+                  display: "flex",
+                  backgroundColor: "#505352",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingHorizontal: wp("1%"),
                 }}
-              />
+              >
+                <InputBox
+                  inputType={"text"}
+                  placeholderName={"search"}
+                  size={wp("2%")}
+                />
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  style={{
+                    color: "#A0A0A0",
+                  }}
+                />
               </View>
             </View>
             <View
               style={{
-                marginTop: verticalScale(40),
+                marginTop: hp("4%"),
                 backgroundColor: "rgba(0, 71, 76, 0.67)",
-                width: horizontalScale(330),
+                width: wp("90%"),
                 padding: moderateScale(20),
                 borderRadius: moderateScale(20),
               }}
             >
               <Text
                 style={{
-                  fontSize: moderateScale(17),
+                  fontSize: hp("2.1%"),
                   alignItems: "center",
                   justifyContent: "center",
                   color: Colors.white,

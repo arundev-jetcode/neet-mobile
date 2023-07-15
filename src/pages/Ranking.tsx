@@ -1,29 +1,22 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  useWindowDimensions,
-  Dimensions,
-} from "react-native";
 import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/Colors";
-import { ImageBackground } from "react-native";
-import StatusBar from "../components/StatusBar";
 import {
-  horizontalScale,
-  moderateScale,
-  verticalScale,
-} from "../styles/Responsive";
-import Colors from "../styles/Colors";
-const width = Dimensions.get("screen").width;
-const height = Dimensions.get("screen").height;
+  ImageBackground,
+  StyleSheet,
+  View,
+  ScrollView,
+  Text,
+} from "react-native";
+import { Dimensions } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+const { width, height } = Dimensions.get("window");
+// import {} from "../assets/"
 const Ranking = () => {
-  const BackgroundImg = require("../assets/BgImg.png");
+  const BackgroundImg = require("../assets/background.png");
 
-  console.log(width, "widthhhhh");
-  console.log(height, "height");
   const RankingList = [
     { name: "Jhone wick", points: "180P", rank: "4th" },
     { name: "Ram", points: "180P", rank: "5th" },
@@ -31,90 +24,55 @@ const Ranking = () => {
     { name: "Parama", points: "150P", rank: "7th" },
     { name: "Lavanya", points: "155P", rank: "8th" },
     { name: "Rayan", points: "150P", rank: "9th" },
-    ,
     { name: "kuku", points: "140P", rank: "10th" },
   ];
 
   return (
-    <>
-      <LinearGradient
-        colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
-        ]}
-        style={styles.container}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        // locations={[1,0.75,1,1]}
-      >
-        <ImageBackground source={BackgroundImg} style={styles.Img}>
-          <View style={styles.rankingContainer}>
-            <View style={styles.profileContainer}>
-              <View style={{ display: "flex", flexDirection: "column" }}>
-                <View style={styles.commonRank}></View>
-              </View>
-              <View style={styles.firstRank}></View>
-              <View style={styles.commonRank}></View>
-            </View>
+    <ImageBackground source={BackgroundImg} style={style.Img}>
+      <SafeAreaProvider>
+        <View style={style.rankingContainer}>
+          <View style={style.profileContainer}>
+            <View style={style.commonRank}></View>
+            <View style={style.firstRank}></View>
+            <View style={style.commonRank}></View>
           </View>
-
-          <View style={{ flex: 1.6, alignItems: "center" }}>
-            <View
-              style={{
-                backgroundColor: "rgba(47, 47, 47, 0.45)",
-                width: 340,
-                borderRadius: 6,
-              }}
-            >
-              <ScrollView style={{ marginVertical: 20 }}>
-                {RankingList.map((res, index) => {
-                  return (
-                    <View key={index} style={styles.rankingList}>
-                      <View style={styles.rankingListCards}>
-                        <View style={styles.rankingListProfileCard}></View>
-                        <View style={styles.rankingListDataContainer}>
-                          <View style={styles.rankingDatacard}>
-                            <View>
-                              <Text style={styles.font}>{res?.name}</Text>
-                              <Text style={styles.font}>{res?.points}</Text>
-                            </View>
-                            <Text style={styles.font}>{res?.rank}</Text>
+        </View>
+        <View style={{ flex: 1.6, alignItems: "center" }}>
+          <View
+            style={{
+              backgroundColor: "rgba(47, 47, 47, 0.45)",
+              width: width / 1.1,
+              borderRadius: 1.9 / 2,
+              height: height / 1.9,
+            }}
+          >
+            <ScrollView style={{ marginVertical: "1%" }}>
+              {RankingList.map((res, index) => {
+                return (
+                  <View key={index} style={style.rankingList}>
+                    <View style={style.rankingListCards}>
+                      <View style={style.rankingListProfileCard}></View>
+                      <View style={style.rankingListDataContainer}>
+                        <View style={style.rankingDatacard}>
+                          <View>
+                            <Text style={style.font}>{res?.name}</Text>
+                            <Text style={style.font}>{res?.points}</Text>
                           </View>
+                          <Text style={style.font}>{res?.rank}</Text>
                         </View>
                       </View>
                     </View>
-                  );
-                })}
-
-                <View style={styles.rankingList}>
-                  <View style={styles.yourRankingContainer}>
-                    <View style={styles.yourRankBackground}>
-                      <View style={styles.yourRankDataCard}>
-                        <View>
-                          <Text style={styles.font}>Arun</Text>
-                          <Text style={styles.font}>120P</Text>
-                        </View>
-                        <Text style={styles.font}>14Th</Text>
-                      </View>
-                    </View>
-                    <View style={styles.yourRankProfile}></View>
                   </View>
-                </View>
-              </ScrollView>
-            </View>
+                );
+              })}
+            </ScrollView>
           </View>
-        </ImageBackground>
-      </LinearGradient>
-    </>
+        </View>
+      </SafeAreaProvider>
+    </ImageBackground>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
+const style = StyleSheet.create({
   Img: {
     width: "100%",
     height: "100%",
@@ -122,93 +80,70 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   rankingContainer: {
-    flex: moderateScale(0.9),
+    flex: 0.9,
     alignItems: "center",
   },
   profileContainer: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-end",
-    columnGap: moderateScale(12),
+    columnGap: hp("1.7%"),
     justifyContent: "center",
   },
   firstRank: {
-    elevation: moderateScale(2),
-    height: verticalScale(120),
-    width: width / 3.3,
-    backgroundColor: Colors.white,
-    borderRadius: moderateScale(100),
+    elevation: hp("2%"),
+    height: height / 6.5,
+    width: width / 3.1,
+    backgroundColor: "white",
+    borderRadius: 100,
     overflow: "hidden",
-    zIndex: 1,
-    top: verticalScale(100),
+    // zIndex: 1,
+    top: "20%",
   },
   commonRank: {
-    elevation: moderateScale(2),
-    height: verticalScale(100),
+    elevation: 2,
+    height: height / 8,
     width: width / 3.9,
-    backgroundColor: Colors.white,
-    borderRadius: moderateScale(999),
+    backgroundColor: "white",
+    borderRadius: 100,
     overflow: "hidden",
     zIndex: 1,
-    top: verticalScale(100),
+    top: "20%",
   },
   rankingList: {
     // flex:moderateScale(0.7),
     alignItems: "center",
     justifyContent: "center",
-    marginTop: verticalScale(12),
+    marginTop: "5%",
   },
   rankingListCards: {
     display: "flex",
     flexDirection: "row",
-    columnGap: moderateScale(12),
+    columnGap: hp("1%"),
   },
   rankingListProfileCard: {
-    backgroundColor: Colors.white,
-    width: horizontalScale(55),
-    height: verticalScale(67),
-    borderRadius: moderateScale(6),
+    backgroundColor: "white",
+    width: width / 7,
+    height: height / 15,
+    borderRadius: 15 / 2,
   },
   rankingListDataContainer: {
-    backgroundColor: Colors.white,
-    width: horizontalScale(240),
-    height: verticalScale(67),
-    borderRadius: moderateScale(6),
+    backgroundColor: "white",
+    width: width / 1.7,
+    height: height / 15,
+    borderRadius: 15 / 2,
   },
   rankingDatacard: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: horizontalScale(10),
+    paddingHorizontal: wp("2%"),
   },
   font: {
-    fontSize: moderateScale(18),
-    fontWeight: "600",
-  },
-  yourRankingContainer: {
-    display: "flex",
-    flexDirection: "row",
-    columnGap: moderateScale(12),
-  },
-  yourRankBackground: {
-    backgroundColor: Colors.white,
-    width: horizontalScale(250),
-    height: verticalScale(80),
-    borderRadius: moderateScale(6),
-  },
-  yourRankDataCard: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: horizontalScale(10),
-  },
-  yourRankProfile: {
-    backgroundColor: Colors.white,
-    width: horizontalScale(55),
-    height: verticalScale(80),
-    borderRadius: moderateScale(6),
+    fontSize: hp("2.1%"),
+    fontWeight: "normal",
   },
 });
+
 export default Ranking;

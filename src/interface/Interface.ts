@@ -20,11 +20,11 @@ export interface ModalProps{
 
 export interface LoginProps {
   index?:number
-  inputType: "text" | "password" | undefined | string ,
+  inputType: "text" | "password"|string ,
   placeholderName: string | undefined,
   componentName?:string,
   fieldType?:string,
-  value?:string |undefined,
+  value?:string,
   label?:string[] | undefined,
   size?:number
 }

@@ -88,8 +88,8 @@ const Rewards = () => {
                 </View>
               </View>
 
-              <View style={{ top: moderateScale(25) }}>
-                <Button _text={styles.claim}>Claim</Button>
+              <View style={{ top: hp("3%") }}>
+                <Button>Claim</Button>
               </View>
             </View>
           </View>
@@ -128,13 +128,13 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     backgroundColor: "rgba(0, 71, 76, 0.67)",
-    paddingHorizontal: horizontalScale(20),
+    paddingHorizontal: wp("3%"),
     paddingVertical: verticalScale(40),
-    borderRadius: moderateScale(10),
-    paddingTop: verticalScale(100),
+    borderRadius: hp(2),
+    paddingTop: hp("12%"),
     position: "absolute",
     zIndex: -1,
-    top: verticalScale(190),
+    top: hp("24%"),
     width: "85%",
     // padding: moderateScale(20),
   },
@@ -145,16 +145,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   currentText: {
-    fontSize: moderateScale(15),
+    fontSize: hp("2%"),
     textTransform: "uppercase",
     color: "white",
-    letterSpacing: moderateScale(10),
+    letterSpacing: wp("3%"),
     backgroundColor: "rgba(255, 255, 255, 0.19)",
-    paddingVertical: moderateScale(5),
+    paddingVertical: hp("0.3%"),
     width: "100%",
   },
   currentPoints: {
-    fontSize: moderateScale(30),
+    fontSize: hp("3%"),
     color: "rgba(244, 220, 0, 1),rgba(219, 134, 6, 1)",
     fontWeight: "bold",
   },
@@ -166,27 +166,27 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   lifeScoreText: {
-    fontSize: moderateScale(14),
+    fontSize: hp("1.8%"),
     color: "white",
     textTransform: "uppercase",
     backgroundColor: "rgba(255, 255, 255, 0.19)",
-    padding: moderateScale(5),
+    padding: hp("0.6%"),
   },
   lifePoints: {
     color: "#0AB8AD",
-    fontSize: moderateScale(22),
+    fontSize: hp("3%"),
     fontWeight: "bold",
   },
   balanceText: {
-    fontSize: moderateScale(14),
+    fontSize: hp("1.8%"),
     color: "white",
     textTransform: "uppercase",
     backgroundColor: "rgba(255, 255, 255, 0.19)",
-    padding: moderateScale(5),
+    padding: hp("0.6%"),
   },
   balancePoints: {
     color: "#0AB8AD",
-    fontSize: moderateScale(22),
+    fontSize: hp("3%"),
     fontWeight: "bold",
   },
   targetContainer: {
@@ -194,19 +194,19 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    top: verticalScale(12),
+    top: hp("2%"),
   },
   targetText: {
-    fontSize: moderateScale(15),
+    fontSize: hp("2%"),
     textTransform: "uppercase",
     color: "white",
-    letterSpacing: moderateScale(10),
+    letterSpacing: wp("3%"),
     backgroundColor: "rgba(255, 255, 255, 0.19)",
-    padding: moderateScale(5),
+    paddingVertical: hp("0.3%"),
     width: "100%",
   },
   targetPoints: {
-    fontSize: moderateScale(30),
+    fontSize: hp("3%"),
     color: "#BDBDBD",
     fontWeight: "bold",
   },
@@ -218,10 +218,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     // padding: moderateScale(10),
-    top: moderateScale(15),
+    top: hp("2%"),
   },
   milstoneText: {
-    padding: 5,
+    padding: hp("1%"),
   },
   subPointsContainer: {
     display: "flex",
@@ -231,32 +231,32 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   subjectText: {
-    fontSize: moderateScale(15),
+    fontSize: hp("2%"),
     textTransform: "uppercase",
     color: "white",
-    right: 6,
+    right: wp("1%"),
   },
   daysContainer: {
     backgroundColor: "rgba(217, 217, 217, 0.59)",
-    paddingHorizontal: moderateScale(12),
+    paddingHorizontal: wp("3%"),
   },
-  claim: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
-    borderBottomWidth: 0,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 1,
-    boxShadow: "inSet 10 16 27 7 rgba(197,255,244,0.48)",
-  },
+  // claim: {
+  //   borderWidth: 1,
+  //   borderRadius: 2,
+  //   borderColor: "#ddd",
+  //   borderBottomWidth: 0,
+  //   shadowColor: "#000",
+  //   shadowOffset: { width: 0, height: 2 },
+  //   shadowOpacity: 0.8,
+  //   shadowRadius: 2,
+  //   elevation: 1,
+  //   boxShadow: "inSet 10 16 27 7 rgba(197,255,244,0.48)",
+  // },
   commonColor: {
     color: Colors.white,
   },
   commonfontSize: {
-    fontSize: moderateScale(22),
+    fontSize: hp("2.5%"),
     color: Colors.white,
   },
   verticleLine: {
