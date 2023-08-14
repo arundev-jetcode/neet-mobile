@@ -5,7 +5,6 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
-  Dimensions,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { LinearBgColor } from "../styles/Colors";
@@ -190,12 +189,13 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height: hp("17%"),
-    width: wp("35%"),
+    height:130,
+    width: 130,
     backgroundColor: "#efefef",
-    borderRadius: moderateScale(75),
+    borderRadius: 130 / 2,
     overflow: "hidden",
     top: hp("4%"),
+    // borderWidth: 3,
     position: "relative",
   },
   uploadBtnContainer: {
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     paddingVertical: hp("2%"),
     paddingTop: hp("5%"),
     borderRadius: 6,
-    position: "relative",
+    position: "relative"
   },
   profileInfoIcon: {
     display: "flex",

@@ -13,10 +13,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 const { width, height } = Dimensions.get("window");
-// import {} from "../assets/"
 const Ranking = () => {
   const BackgroundImg = require("../assets/background.png");
-
   const RankingList = [
     { name: "Jhone wick", points: "180P", rank: "4th" },
     { name: "Ram", points: "180P", rank: "5th" },
@@ -26,7 +24,6 @@ const Ranking = () => {
     { name: "Rayan", points: "150P", rank: "9th" },
     { name: "kuku", points: "140P", rank: "10th" },
   ];
-
   return (
     <ImageBackground source={BackgroundImg} style={style.Img}>
       <SafeAreaProvider>
@@ -91,22 +88,22 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
   firstRank: {
-    elevation: hp("2%"),
-    height: height / 6.5,
-    width: width / 3.1,
+    // elevation: hp("2%"),
+    height: 110,
+    width: 110,
     backgroundColor: "white",
-    borderRadius: 100,
+    borderRadius: 110/2,
     overflow: "hidden",
     // zIndex: 1,
     top: "20%",
   },
   commonRank: {
-    elevation: 2,
-    height: height / 8,
-    width: width / 3.9,
+    // elevation: 40,
+    height: 90,
+    width: 90,
     backgroundColor: "white",
-    borderRadius: 100,
-    overflow: "hidden",
+    borderRadius: 90/2,
+    // overflow: "hidden",
     zIndex: 1,
     top: "20%",
   },

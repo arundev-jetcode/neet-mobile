@@ -52,7 +52,7 @@ const ModalBox = ({ showModal,modelData, setShowModal,  }: ModalProps) => {
                 </Pressable>
               );
             })}
-                    <RadioButton labelName={""} options={options}  />
+                    {/* <RadioButton labelName={""} options={options}  /> */}
 
           </Modal.Body>
         </Modal.Content>

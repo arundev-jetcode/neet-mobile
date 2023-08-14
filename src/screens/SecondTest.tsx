@@ -86,6 +86,9 @@ const SecondTest = () => {
             <View
               style={{
                 marginTop: verticalScale(70),
+                display:'flex',
+                flexDirection:'row',
+                justifyContent:'space-between'
               }}
             >
          <ArrowSvg/>

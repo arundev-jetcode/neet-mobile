@@ -1,13 +1,11 @@
 import { View, Text, StyleSheet, Dimensions, ScrollView } from "react-native";
-import { Button, stylingProps } from "native-base";
+import { Button } from "native-base";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { LinearBgColor } from "../styles/Colors";
 import { ImageBackground, Image } from "react-native";
 import StatusBar from "../components/StatusBar";
 import {
-  horizontalScale,
-  moderateScale,
   verticalScale,
 } from "../styles/Responsive";
 import Colors from "../styles/Colors";

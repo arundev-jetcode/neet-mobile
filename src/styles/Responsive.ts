@@ -1,10 +1,7 @@
 import { Dimensions, PixelRatio } from 'react-native';
-
-
 const guidelineBaseWidth = 375;
 const guidelineBaseHeight = 812;
 const fontScale = PixelRatio.getFontScale();
-
 const horizontalScale = (size: number) => {
     const { width, height } = Dimensions.get('window');
 
@@ -18,6 +15,4 @@ const verticalScale = (size: number) => {
 const moderateScale = (size: number, factor = 0.5) => {
     return(size + (horizontalScale(size) - size) * factor)
 };
-// const getFontSize = (size:number) => size / fontScale;
-
 export { horizontalScale, verticalScale, moderateScale };

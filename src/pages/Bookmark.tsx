@@ -77,6 +77,7 @@ const Bookmark = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   paddingHorizontal: wp("1%"),
+                  width:'85%'
                 }}
               >
                 <InputBox

@@ -85,12 +85,16 @@ const Test = () => {
               alignItems: "center",
             }}
           >
-            <ArrowSvg/>
+          
             <View
               style={{
                 marginTop: verticalScale(70),
+                display:'flex',
+                flexDirection:'row',
+                justifyContent:'space-between'
               }}
             >
+                <ArrowSvg/>
               <Pressable
                 onPress={() => navigate.goBack()}
                 style={{
@@ -153,7 +157,7 @@ const Test = () => {
               height={"50"}
               textSize={0}
               text={"Check"}
-              backgroundColor={"#ffffff"}
+              backgroundColor={"#AAFFAD"}
               textColor={"red"}
               callback={ResultPage}
             />

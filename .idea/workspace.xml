@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="19781dc0-36b4-46b4-b45b-196aa9229259" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LevelupSvg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LevelupSvg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StatusBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StatusBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Bookmark.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Bookmark.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Ranking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ranking.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Rewards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Rewards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SecondTest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SecondTest.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Responsive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Responsive.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

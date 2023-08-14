@@ -105,7 +105,7 @@ const InputBox = (props: LoginProps) => {
         <View
           style={{
             marginTop: !inputsize ? 12 : 0,
-            width: inputsize ? verticalScale(340) : verticalScale(300),
+            width: inputsize ? "100%" :"100%",
             backgroundColor: inputsize ? "#505352" : "white",
             borderRadius: moderateScale(6),
           }}
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     height: hp("20%"),
     fontSize: hp("50%"),
     alignItems: "center",
+    width:'100%'
   },
   username: {
     height: verticalScale(50),
