@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/Colors";
+import { LinearBgColor } from "../styles/themes";
 import OtpInputs from "react-native-otp-inputs";
 import Buttons from "../components/Button";
 const Otp = () => {

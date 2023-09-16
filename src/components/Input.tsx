@@ -126,15 +126,15 @@ const InputBox = (props: LoginProps) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 12,
-    width: wp("76%"),
+    width: wp(76),
     backgroundColor: "white",
     borderRadius: 6,
   },
   input: {
-    height: hp("20%"),
-    fontSize: hp("50%"),
+    height: hp(20),
+    fontSize: hp(30),
     alignItems: "center",
-    width:'100%'
+    width:wp(10)
   },
   username: {
     height: verticalScale(50),

@@ -9,6 +9,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import LevelupSvg from "../components/LevelupSvg";
+import axios from "axios";
 
 const screenWidth = Dimensions.get("window").width;
 const screenheight = Dimensions.get("window").height;
@@ -23,6 +24,16 @@ const Home = (props: any) => {
   // }, []);
   console.log(props);
   const insets = useSafeAreaInsets();
+  useEffect(()=>{
+
+  },[])
+  axios.get('http://localhost:3000/api/question').then((res)=>{
+  console.log(res.data,'daraa');
+  
+}).catch((err)=>{
+  console.log(err,'errrr');
+  
+})
   return (
     <>
       <ScrollView>

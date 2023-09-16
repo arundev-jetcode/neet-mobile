@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, ImageBackground } from "react-native";
 import React, { useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors, { LinearBgColor } from "../styles/Colors";
 import StatusBar from "../components/StatusBar";
 import { Input } from "native-base";
 import {
@@ -18,6 +17,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { COLORS } from "../styles/themes";
 const Bookmark = () => {
   const BackgroundImg = require("../assets/BgImg.png");
   // const [appState, setAppState] = React.useContext(ThemeContext);
@@ -37,10 +37,10 @@ const Bookmark = () => {
 
       <LinearGradient
         colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
+          COLORS.primary01,
+          COLORS.primary02,
+          COLORS.primary03,
+          COLORS.primary05
         ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
@@ -56,59 +56,30 @@ const Bookmark = () => {
           >
             <View
               style={{
-                marginTop: hp("9%"),
+                marginTop: hp(9),
               }}
             >
-              <Text
-                style={{
-                  color: Colors.white,
-                  fontSize: hp("3%"),
-                  fontWeight: "bold",
-                }}
-              >
-                Notes
-              </Text>
+              <Text style={styles.note}  >Notes </Text>
 
-              <View
-                style={{
-                  display: "flex",
-                  backgroundColor: "#505352",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  paddingHorizontal: wp("1%"),
-                  width:'85%'
-                }}
-              >
+              <View  style={styles.searchContainer} >
                 <InputBox
                   inputType={"text"}
                   placeholderName={"search"}
-                  size={wp("2%")}
+                  size={wp(5)}
                 />
                 <FontAwesomeIcon
                   icon={faMagnifyingGlass}
                   style={{
-                    color: "#A0A0A0",
+                    color: COLORS.grey01,
                   }}
                 />
               </View>
             </View>
             <View
-              style={{
-                marginTop: hp("4%"),
-                backgroundColor: "rgba(0, 71, 76, 0.67)",
-                width: wp("90%"),
-                padding: moderateScale(20),
-                borderRadius: moderateScale(20),
-              }}
+              style={styles.qusContainer}
             >
               <Text
-                style={{
-                  fontSize: hp("2.1%"),
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: Colors.white,
-                }}
+                style={styles.qus}
               >
                 1.If a soap bubble expands, the pressure inside the bubble
               </Text>
@@ -136,4 +107,31 @@ const styles = StyleSheet.create({
     // opacity: 0.8,
     resizeMode: "stretch",
   },
+  note:{
+    color: COLORS.light,
+   fontSize: hp("3%"),
+   fontWeight: "bold",
+  },
+  searchContainer:{
+    display: "flex",
+    backgroundColor: COLORS.grey,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: wp(4),
+    width:wp(90)
+  },
+  qusContainer:{
+    marginTop: hp(4),
+    backgroundColor: COLORS.secondary05,
+    width: wp(90),
+    padding: moderateScale(20),
+    borderRadius: moderateScale(20),
+  },
+  qus:{
+    fontSize: hp(2.1),
+    alignItems: "center",
+    justifyContent: "center",
+    color: COLORS.light,
+  }
 });

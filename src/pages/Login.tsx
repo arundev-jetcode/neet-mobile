@@ -1,7 +1,7 @@
 import { View,Text,StyleSheet, ImageBackground,Image } from "react-native"
 import React from "react"
 import { LinearGradient } from "expo-linear-gradient"
-import { LinearBgColor } from "../styles/Colors";
+import { LinearBgColor } from "../styles/themes";
 import InputBox from "../components/Input";
 import { LoginProps } from "../interface/Interface";
 import Buttons from "../components/Button";

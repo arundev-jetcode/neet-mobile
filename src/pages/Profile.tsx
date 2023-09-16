@@ -5,16 +5,16 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  StatusBar,ScrollView
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/Colors";
 import { faCamera, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import InputBox from "../components/Input";
 import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
-import Colors from "../styles/Colors";
+import Theme from "../styles/themes";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
   horizontalScale,
@@ -90,10 +90,10 @@ const Profile = () => {
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
       <LinearGradient
         colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
+          Theme.COLORS.primary01,
+          Theme.COLORS.primary02,
+          Theme.COLORS.primary03,
+          Theme.COLORS.primary05
         ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
@@ -101,6 +101,10 @@ const Profile = () => {
         // locations={[1,0.75,1,1]}
       >
         <ImageBackground source={BackgroundImg} style={styles.Img}>
+          <ScrollView style={{flex:1}}
+          alwaysBounceVertical={true}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false} >
           <View style={styles.profileContainer}>
             <View style={{ position: "relative", zIndex: 1 }}>
               <View style={styles.imgcontainer}>
@@ -147,7 +151,7 @@ const Profile = () => {
                 <FontAwesomeIcon
                   size={24}
                   icon={faPenToSquare}
-                  color={Colors.white}
+                  color={Theme.COLORS.light}
                 />
               </View>
               {inputDetails.map((data, index) => {
@@ -165,6 +169,7 @@ const Profile = () => {
               })}
             </View>
           </View>
+          </ScrollView>
         </ImageBackground>
       </LinearGradient>
     </>
@@ -176,6 +181,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    paddingTop:StatusBar.currentHeight
   },
   Img: {
     width: wp("100%"),
@@ -189,12 +195,12 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height:130,
-    width: 130,
+    height:wp(34),
+    width: wp(34),
     backgroundColor: "#efefef",
-    borderRadius: 130 / 2,
+    borderRadius:wp(17),
     overflow: "hidden",
-    top: hp("4%"),
+    top: hp(4),
     // borderWidth: 3,
     position: "relative",
   },
@@ -220,12 +226,12 @@ const styles = StyleSheet.create({
   profileInfoText: {
     fontSize: hp("3%"),
     fontWeight: "bold",
-    color: Colors.white,
+    color: Theme.COLORS.light,
   },
   nameClass: {
     textAlign: "center",
     fontSize: hp("2.6%"),
-    color: Colors.white,
+    color: Theme.COLORS.light,
   },
 });
 

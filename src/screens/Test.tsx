@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, ImageBackground, Button } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors, { LinearBgColor } from "../styles/Colors";
+import  { COLORS } from "../styles/themes";
 import StatusBar from "../components/StatusBar";
 import { Input, Pressable } from "native-base";
 import {
@@ -67,11 +67,11 @@ const Test = () => {
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
 
       <LinearGradient
-        colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
+          colors={[
+            COLORS.primary01,
+            COLORS.primary02,
+            COLORS.primary03,
+            COLORS.primary05
         ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
@@ -123,7 +123,7 @@ const Test = () => {
                   fontSize: moderateScale(17),
                   alignItems: "center",
                   justifyContent: "center",
-                  color: Colors.white,
+                  color: COLORS.light,
                 }}
               >
                 1.If a soap bubble expands, the pressure inside the bubble
@@ -142,9 +142,9 @@ const Test = () => {
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   size={24}
-                  color={Colors.yellow}
+                  color={COLORS.yellow01}
                 />
-                <Text style={{ color: Colors.white }}>Report issue</Text>
+                <Text style={{ color: COLORS.light }}>Report issue</Text>
                 <ModalBox
                   setShowModal={setShowModal}
                   showModal={showModal}

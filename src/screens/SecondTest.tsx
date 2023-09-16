@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, ImageBackground, Button,Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors, { LinearBgColor } from "../styles/Colors";
+import Colors, { LinearBgColor } from "../styles/themes";
 import {  Pressable } from "react-native";
 import {
   horizontalScale,

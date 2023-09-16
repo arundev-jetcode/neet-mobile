@@ -2,13 +2,14 @@ import { View, Text, StyleSheet, Dimensions, ScrollView } from "react-native";
 import { Button } from "native-base";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/Colors";
 import { ImageBackground, Image } from "react-native";
 import StatusBar from "../components/StatusBar";
+import {} from "../styles/themes";
+
 import {
   verticalScale,
 } from "../styles/Responsive";
-import Colors from "../styles/Colors";
+import Colors, { COLORS } from "../styles/themes";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -25,10 +26,10 @@ const Rewards = () => {
 
       <LinearGradient
         colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
+            COLORS.primary01,
+            COLORS.primary02,
+            COLORS.primary03,
+            COLORS.primary05
         ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
@@ -49,13 +50,13 @@ const Rewards = () => {
               <View style={styles.lifeContainer}>
                 <View>
                   <Text style={styles.lifeScoreText}>Life time score</Text>
-                  <Text style={styles.lifePoints}>8,000</Text>
+                  <Text style={styles.life_balance_Points}>8,000</Text>
                 </View>
                 <View style={styles.verticleLine}></View>
 
                 <View>
                   <Text style={styles.balanceText}>Balance points</Text>
-                  <Text style={styles.balancePoints}>4,000</Text>
+                  <Text style={styles.life_balance_Points}>4,000</Text>
                 </View>
               </View>
               <View style={styles.targetContainer}>
@@ -86,7 +87,7 @@ const Rewards = () => {
                 </View>
               </View>
 
-              <View style={{ top: hp("3%") }}>
+              <View style={{ top: hp(3) }}>
                 <Button>Claim</Button>
               </View>
             </View>
@@ -107,7 +108,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   Img: {
-    // width: "100%",
     width: "100%",
     flex: 1,
     height: "100%",
@@ -125,15 +125,15 @@ const styles = StyleSheet.create({
     bottom: hp(25),
   },
   contentContainer: {
-    backgroundColor: "rgba(0, 71, 76, 0.67)",
-    paddingHorizontal: wp("3%"),
+    backgroundColor: COLORS.secondary05,
+    paddingHorizontal: wp(3),
     paddingVertical: verticalScale(40),
     borderRadius: hp(2),
-    paddingTop: hp("12%"),
+    paddingTop: hp(12),
     position: "absolute",
     zIndex: -1,
-    top: hp("24%"),
-    width: "85%",
+    top: hp(24),
+    width: wp(85),
     // padding: moderateScale(20),
   },
   curntpointCont: {
@@ -143,17 +143,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   currentText: {
-    fontSize: hp("2%"),
+    fontSize: hp(2),
     textTransform: "uppercase",
-    color: "white",
-    letterSpacing: wp("3%"),
-    backgroundColor: "rgba(255, 255, 255, 0.19)",
-    paddingVertical: hp("0.3%"),
+    color: COLORS.light,
+    letterSpacing: wp(3),
+    backgroundColor: COLORS.grey02,
+    paddingVertical: hp(0.3),
     width: "100%",
   },
   currentPoints: {
-    fontSize: hp("3%"),
-    color: "rgba(244, 220, 0, 1),rgba(219, 134, 6, 1)",
+    fontSize: hp(3),
+    color: `${COLORS.yellow02},${COLORS.yellow03}`,
     fontWeight: "bold",
   },
   lifeContainer: {
@@ -164,62 +164,57 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   lifeScoreText: {
-    fontSize: hp("1.8%"),
-    color: "white",
+    fontSize: hp(1.8),
+    color: COLORS.light,
     textTransform: "uppercase",
-    backgroundColor: "rgba(255, 255, 255, 0.19)",
-    padding: hp("0.6%"),
+    backgroundColor:COLORS.grey02,
+    padding: hp(0.6),
   },
-  lifePoints: {
-    color: "#0AB8AD",
-    fontSize: hp("3%"),
+  life_balance_Points: {
+    color: COLORS.primary03,
+    fontSize: hp(3),
     fontWeight: "bold",
   },
   balanceText: {
-    fontSize: hp("1.8%"),
+    fontSize: hp(1.8),
     color: "white",
     textTransform: "uppercase",
-    backgroundColor: "rgba(255, 255, 255, 0.19)",
-    padding: hp("0.6%"),
-  },
-  balancePoints: {
-    color: "#0AB8AD",
-    fontSize: hp("3%"),
-    fontWeight: "bold",
+    backgroundColor: COLORS.grey02,
+    padding: hp(0.6),
   },
   targetContainer: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    top: hp("2%"),
+    top: hp(2),
   },
   targetText: {
-    fontSize: hp("2%"),
+    fontSize: hp(2),
     textTransform: "uppercase",
-    color: "white",
-    letterSpacing: wp("3%"),
-    backgroundColor: "rgba(255, 255, 255, 0.19)",
-    paddingVertical: hp("0.3%"),
+    color: COLORS.light,
+    letterSpacing: wp(3),
+    backgroundColor: COLORS.grey02,
+    paddingVertical: hp(0.3),
     width: "100%",
   },
   targetPoints: {
-    fontSize: hp("3%"),
-    color: "#BDBDBD",
+    fontSize: hp(3),
+    color: COLORS.grey09,
     fontWeight: "bold",
   },
   milestoneContainer: {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "rgba(255, 255, 255, 0.19)",
+    backgroundColor: COLORS.grey02,
     // columnGap: moderateScale(30),
     alignItems: "center",
     justifyContent: "space-between",
     // padding: moderateScale(10),
-    top: hp("2%"),
+    top: hp(2),
   },
   milstoneText: {
-    padding: hp("1%"),
+    padding: hp(1),
   },
   subPointsContainer: {
     display: "flex",
@@ -229,14 +224,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   subjectText: {
-    fontSize: hp("2%"),
+    fontSize: hp(2),
     textTransform: "uppercase",
-    color: "white",
-    right: wp("1%"),
+    color: COLORS.light,
+    right: wp(1),
   },
   daysContainer: {
-    backgroundColor: "rgba(217, 217, 217, 0.59)",
-    paddingHorizontal: wp("3%"),
+    backgroundColor: COLORS.lightGrey80,
+    paddingHorizontal: wp(3),
   },
   // claim: {
   //   borderWidth: 1,
@@ -251,16 +246,16 @@ const styles = StyleSheet.create({
   //   boxShadow: "inSet 10 16 27 7 rgba(197,255,244,0.48)",
   // },
   commonColor: {
-    color: Colors.white,
+    color: COLORS.light,
   },
   commonfontSize: {
-    fontSize: hp("2.5%"),
-    color: Colors.white,
+    fontSize: hp(2.5),
+    color: COLORS.light,
   },
   verticleLine: {
-    height: "80%",
-    width: 3,
-    backgroundColor: "rgba(217, 217, 217, 0.38)",
+    height: hp(8),
+    width: wp(1),
+    backgroundColor: COLORS.grey02,
   },
 });
 

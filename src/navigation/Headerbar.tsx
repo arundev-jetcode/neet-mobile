@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, View, TouchableOpacity, Image, StyleSheet } from "react-native";
 import ModalBox from "../components/Modal";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Colors from "../styles/Colors";
+import Colors, { COLORS } from "../styles/themes";
 import { PopupModal } from "../interface/Interface";
 import { Pressable } from "native-base";
 
@@ -74,7 +74,7 @@ const HeaderMenuStyle = StyleSheet.create({
   container: {
     paddingTop: 10,
     paddingBottom: 10,
-    backgroundColor: Colors.darkGreen,
+    backgroundColor: COLORS.secondary01,
   },
   imageStyle: {
     width: 50,
@@ -88,7 +88,7 @@ const HeaderMenuStyle = StyleSheet.create({
     alignItems: "center",
   },
   neetContainer: {
-    backgroundColor: Colors.tertiary,
+    backgroundColor: COLORS.primary08,
   },
   neetSubContainer: {
     display: "flex",

@@ -7,9 +7,9 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/Colors";
+import { COLORS } from "../styles/themes";
 import StatusBar from "../components/StatusBar";
-import Colors from "../styles/Colors";
+import Colors from "../styles/themes";
 import { moderateScale } from "../styles/Responsive";
 import FontScale from "../styles/fontResponsive";
 const Notification = () => {
@@ -20,12 +20,12 @@ const Notification = () => {
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
 
       <LinearGradient
-        colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
-        ]}
+       colors={[
+        COLORS.primary01,
+        COLORS.primary02,
+        COLORS.primary03,
+        COLORS.primary05
+      ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -51,16 +51,16 @@ const Notification = () => {
                   columnGap: 12,
                 }}
               >
-                <Text style={{ fontSize: FontScale(15), color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(15), color: COLORS.light }}>
                   Medico
                 </Text>
-                <Text style={{ color: Colors.white }}>now</Text>
+                <Text style={{ color: COLORS.light  }}>now</Text>
               </View>
               <View>
-                <Text style={{ fontSize: FontScale(17), color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(17), color: COLORS.light  }}>
                   Exam updates
                 </Text>
-                <Text style={{ fontSize: FontScale(17), color: Colors.white }}>
+                <Text style={{ fontSize: FontScale(17), color: COLORS.light  }}>
                   Modal exam date comming soon
                 </Text>
               </View>

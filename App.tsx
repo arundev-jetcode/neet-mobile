@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "react-native-gesture-handler";
 import { StyleSheet, Text, View, StatusBarStyle } from "react-native";
 import { NativeBaseProvider, Box } from "native-base";
-import Colors from "./src/styles/Colors";
+import Colors from "./src/styles/themes";
 import BottomBar from "./src/navigation/BottomBar";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
@@ -14,6 +14,7 @@ import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
+import Plans from "./src/pages/Plans";
 
 export const ThemeContext = React.createContext<any>([]);
 //Ignore all log notifications
@@ -61,7 +62,7 @@ export default function App() {
         />
         {/* <BottomBar setAppState={setAppState} /> */}
         <StackNavigation />
-
+{/* <Plans/> */}
         {/* <Otp /> */}
         {/* <Login/> */}
         {/* <UploadImage/> */}

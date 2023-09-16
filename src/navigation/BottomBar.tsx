@@ -17,7 +17,7 @@ import Rewards from "../pages/Rewards";
 import Profile from "../pages/Profile";
 import Ranking from "../pages/Ranking";
 import Notification from "../pages/Notification";
-import Colors from "../styles/Colors";
+import Colors, { COLORS } from "../styles/themes";
 import { DefaultTheme, Provider } from "react-native-paper";
 import { ThemeContext } from "../../App";
 
@@ -45,8 +45,8 @@ const BottomBar = () => {
       {/* <NavigationContainer ref={navigationRef}> */}
       <Tab.Navigator
         initialRouteName="Home"
-        activeColor={Colors.white}
-        barStyle={{ backgroundColor: Colors.darkGreen }}
+        activeColor={COLORS.light}
+        barStyle={{ backgroundColor: COLORS.secondary01 }}
       >
         {bottombarDatas.map((res, i) => {
           return (
@@ -60,7 +60,7 @@ const BottomBar = () => {
                   <FontAwesomeIcon
                     icon={res.icon}
                     size={24}
-                    color={focused ? Colors.yellow : Colors.white}
+                    color={focused ? COLORS.yellow01 : COLORS.light}
                   />
                 ),
               }}
