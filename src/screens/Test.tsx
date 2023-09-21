@@ -153,8 +153,8 @@ const Test = () => {
               </Pressable>
             </View>
             <Buttons
-              width={"100"}
-              height={"50"}
+              width={100}
+              height={50}
               textSize={0}
               text={"Check"}
               backgroundColor={"#AAFFAD"}

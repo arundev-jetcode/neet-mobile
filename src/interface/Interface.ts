@@ -2,6 +2,7 @@
 
 export interface ModalProps{
     showModal:boolean,
+    showEmoji?:boolean,
     modelData?:PopupModal[],
     setShowModal:(open: boolean) => void,
     report?: {label: string ; value: string;}[]
@@ -14,7 +15,11 @@ export interface ModalProps{
     sub?:string,
     report?:string,
     value?:string,
-    label?:string
+    label?:string,
+    lock?:boolean,
+    title?:string,
+    date?:string,
+    streaks?:true
 
 }
 
@@ -38,8 +43,8 @@ report?: {label: string ; value: string;}[]
 }
 
 export interface ButtonProps {
-  width:string,
-  height:string,
+  width:number,
+  height:number,
   textSize:number,
   color?:string,
   text:string,

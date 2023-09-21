@@ -35,7 +35,7 @@ const inputDetails = [
         end={{ x: 1, y: 1 }}
         // locations={[1,0.75,1,1]}
       >
-        <ImageBackground source={BackgroundImg}  style={styles.Img}  >
+        <ImageBackground source={BackgroundImg}  style={styles.Img} >
            <View  style={styles.LoginContainer}>
             <Image source={logo} style={{width:"40%",height:"21%"}} />
             {inputDetails.map((data,index)=>{

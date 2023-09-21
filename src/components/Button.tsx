@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 import { ButtonProps } from "../interface/Interface";
 
 const Buttons = (buttonProps: ButtonProps) => {
+  console.log(buttonProps,'buttonProps');
+  
   return (
     <Button
       style={styles.container}

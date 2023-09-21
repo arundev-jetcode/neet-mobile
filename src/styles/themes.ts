@@ -17,6 +17,7 @@ export const COLORS = {
   primary06: 'rgba(2, 134, 134, 1)',
   primary07: 'rgba(9, 163, 163, 0.75)',
   primary08:'rgba(64, 182, 175, 0.84)',
+  primary09:'rgba(0, 254, 179, 0.88)',
 
   // Secondary
   secondary01: 'rgba(0, 71, 76, 0.92)',
@@ -24,6 +25,7 @@ export const COLORS = {
   secondary03: 'rgba(4, 182, 0, 1)',
   secondary04: 'rgba(197, 255, 244, 0.5)',
   secondary05: 'rgba(0, 71, 76, 0.67)',
+  secondary06:'rgba(11, 73, 55, 1)',
 
   // Yellow
   yellow01:' rgba(233, 209, 0, 1)',
@@ -54,10 +56,13 @@ export const COLORS = {
 
   // Light Grey
   lightGrey: 'rgba(255, 255, 255, 0.51)',
+  lightGrey10:'rgba(158, 158, 158, 1)',
   lightGrey80: 'rgba(217, 217, 217, 1)',
   lightGrey60: 'rgba(238, 238, 238, 1)',
   lightGrey20: 'rgba(220, 220, 220, 0.79)',
+  lightGrey21:'rgba(86, 83, 83, 1)',
   lightGrey08: 'rgba(247, 247, 247, 0.08)',
+
 
   // Light
   light: 'rgba(255, 255, 255, 1)',

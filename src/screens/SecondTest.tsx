@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, ImageBackground, Button,Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors, { LinearBgColor } from "../styles/themes";
+import  {COLORS} from "../styles/themes";
 import {  Pressable } from "react-native";
 import {
   horizontalScale,
@@ -65,12 +65,12 @@ const SecondTest = () => {
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
 
       <LinearGradient
-        colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
-        ]}
+         colors={[
+          COLORS.primary01,
+          COLORS.primary02,
+          COLORS.primary03,
+          COLORS.primary05
+      ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -120,7 +120,7 @@ const SecondTest = () => {
                   fontSize: moderateScale(17),
                   alignItems: "center",
                   justifyContent: "center",
-                  color: Colors.white,
+                  color: COLORS.light,
                 }}
               >
                 1.If a soap bubble expands, the pressure inside the bubble
@@ -139,9 +139,9 @@ const SecondTest = () => {
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   size={24}
-                  color={Colors.yellow}
+                  color={COLORS.yellow01}
                 />
-                <Text style={{ color: Colors.white }}>Report issue</Text>
+                <Text style={{ color: COLORS.light }}>Report issue</Text>
                 
                 <ModalBox
                   setShowModal={setShowModal}
@@ -150,13 +150,13 @@ const SecondTest = () => {
                 />
               </Pressable>
               <View>
-                  <Text style={{marginTop:12,color:Colors.white,fontWeight:'800'}} >Explaination</Text>
+                  <Text style={{marginTop:12,color:COLORS.light,fontWeight:'800'}} >Explaination</Text>
                   <Text>If a soap bubble expands, the pressure inside the bubbleIf a If a soap bubble expands, the pressure inside bubble soap bubble expands,the pressure inside the bubble.pressure inside bubble soap bubble expands,the pressure inside the bubbleIf a soap bubble expands, the pressure inside the bubbleIf a If a soap bubble expands, the pressure inside bubble soap bubble expands,the pressure inside the bubble.pressure inside bubble soap bubble expands,the pressure inside the bubble</Text>
                 </View>
             </View>
             <Buttons
-              width={"100"}
-              height={"50"}
+              width={100}
+              height={50}
               textSize={0}
               text={"Check"}
               backgroundColor={"green"}
