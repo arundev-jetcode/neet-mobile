@@ -44,6 +44,6 @@ export interface ButtonProps {
   color?:string,
   text:string,
   backgroundColor:string,
-  textColor:string,
+  textColor?:string,
   callback?: () => void;
 }

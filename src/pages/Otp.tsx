@@ -7,9 +7,9 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { LinearBgColor } from "../styles/themes";
 import OtpInputs from "react-native-otp-inputs";
 import Buttons from "../components/Button";
+import { COLORS } from "../styles/themes";
 const Otp = () => {
   const BackgroundImg = require("../assets/BgImg.png");
 
@@ -18,12 +18,12 @@ const Otp = () => {
       {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
 
       <LinearGradient
-        colors={[
-          LinearBgColor.hospitalblue1,
-          LinearBgColor.hospitalblue2,
-          LinearBgColor.hospitalblue3,
-          LinearBgColor.hospitalblue4,
-        ]}
+          colors={[
+            COLORS.primary01,
+            COLORS.primary02,
+            COLORS.primary03,
+            COLORS.primary05
+          ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -62,8 +62,7 @@ const Otp = () => {
               height={"5%"}
               textSize={0}
               text="Verify Otp"
-              backgroundColor={"#003C31"}
-            />
+              backgroundColor={"#003C31"} textColor={""}            />
           </View>
         </ImageBackground>
       </LinearGradient>

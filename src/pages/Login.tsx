@@ -1,10 +1,10 @@
 import { View,Text,StyleSheet, ImageBackground,Image } from "react-native"
 import React from "react"
 import { LinearGradient } from "expo-linear-gradient"
-import { LinearBgColor } from "../styles/themes";
 import InputBox from "../components/Input";
 import { LoginProps } from "../interface/Interface";
 import Buttons from "../components/Button";
+import { COLORS } from "../styles/themes";
 
 const Login=()=>{
 
@@ -24,7 +24,12 @@ const inputDetails = [
  
     return(
         <LinearGradient
-        colors={[LinearBgColor.hospitalblue1,LinearBgColor.hospitalblue2,LinearBgColor.hospitalblue3,LinearBgColor.hospitalblue4]}
+        colors={[
+          COLORS.primary01,
+          COLORS.primary02,
+          COLORS.primary03,
+          COLORS.primary05
+        ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -39,7 +44,7 @@ const inputDetails = [
                
               )
             })}
-            <Buttons/>
+            {/* <Buttons/> */}
             <View style={{width:"80%",marginTop:12,display:"flex",flexDirection:"row",columnGap:12}} >
             <Text style={{fontSize:20,color:"white"}} >Do you have an account yet ?</Text>
             <Text style={{fontSize:20}} >Signup</Text>

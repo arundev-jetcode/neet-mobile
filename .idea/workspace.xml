@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19781dc0-36b4-46b4-b45b-196aa9229259" name="Changes" comment="">
+    <list default="true" id="0431a157-4a66-48b9-a0ea-d1ca1c8d4116" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/Interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/BottomBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Bookmark.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Bookmark.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Notification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Notification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Otp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Otp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Ranking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ranking.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Rewards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Rewards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SecondTest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SecondTest.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Colors.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +39,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19781dc0-36b4-46b4-b45b-196aa9229259" name="Changes" comment="" />
+      <changelist id="0431a157-4a66-48b9-a0ea-d1ca1c8d4116" name="Changes" comment="" />
       <created>1685610132771</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

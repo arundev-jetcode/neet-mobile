@@ -17,7 +17,7 @@ import Rewards from "../pages/Rewards";
 import Profile from "../pages/Profile";
 import Ranking from "../pages/Ranking";
 import Notification from "../pages/Notification";
-import Colors, { COLORS } from "../styles/themes";
+import { COLORS } from "../styles/themes";
 import { DefaultTheme, Provider } from "react-native-paper";
 import { ThemeContext } from "../../App";
 
@@ -47,6 +47,7 @@ const BottomBar = () => {
         initialRouteName="Home"
         activeColor={COLORS.light}
         barStyle={{ backgroundColor: COLORS.secondary01 }}
+        labeled={false}
       >
         {bottombarDatas.map((res, i) => {
           return (
