@@ -38,9 +38,9 @@ const Ranking = () => {
           <View
             style={{
               backgroundColor: "rgba(47, 47, 47, 0.45)",
-              width: width / 1.1,
-              borderRadius: 1.9 / 2,
-              height: height / 1.9,
+              width: wp(85),
+              borderRadius:hp(2),
+              height: hp(50),
             }}
           >
             <ScrollView style={{ marginVertical: "1%" }}>
@@ -84,7 +84,7 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-end",
-    columnGap: hp("1.7%"),
+    columnGap: hp(1.7),
     justifyContent: "center",
   },
   firstRank: {
@@ -95,7 +95,7 @@ const style = StyleSheet.create({
     borderRadius: wp(16),
     overflow: "hidden",
     // zIndex: 1,
-    top: "20%",
+    top: hp(4),
   },
   commonRank: {
     // elevation: 40,
@@ -105,40 +105,40 @@ const style = StyleSheet.create({
     borderRadius: wp(12.5),
     // overflow: "hidden",
     zIndex: 1,
-    top: "20%",
+    top: hp(5),
   },
   rankingList: {
     // flex:moderateScale(0.7),
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "5%",
+    marginTop: hp(2),
   },
   rankingListCards: {
     display: "flex",
     flexDirection: "row",
-    columnGap: hp("1%"),
+    columnGap: hp(1),
   },
   rankingListProfileCard: {
     backgroundColor: "white",
-    width: width / 7,
-    height: height / 15,
-    borderRadius: 15 / 2,
+    width: wp(13),
+    height:hp(7),
+    borderRadius: hp(1),
   },
   rankingListDataContainer: {
     backgroundColor: "white",
-    width: width / 1.7,
-    height: height / 15,
-    borderRadius: 15 / 2,
+    width: wp(63),
+    height:hp(7),
+    borderRadius: hp(1),
   },
   rankingDatacard: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: wp("2%"),
+    paddingHorizontal: wp(2),
   },
   font: {
-    fontSize: hp("2.1%"),
+    fontSize: hp(2.1),
     fontWeight: "normal",
   },
 });

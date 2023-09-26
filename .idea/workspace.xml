@@ -6,14 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0431a157-4a66-48b9-a0ea-d1ca1c8d4116" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RadioButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RadioButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Headerbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Bookmark.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Bookmark.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SecondTest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SecondTest.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/themes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/themes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Notification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Notification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Otp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Otp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Plans.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Plans.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Ranking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ranking.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Rewards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Rewards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fontResponsive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fontResponsive.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

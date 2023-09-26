@@ -37,7 +37,7 @@ const inputDetails = [
       >
         <ImageBackground source={BackgroundImg}  style={styles.Img} >
            <View  style={styles.LoginContainer}>
-            <Image source={logo} style={{width:"40%",height:"21%"}} />
+            <Image source={logo} style={styles.logo} />
             {inputDetails.map((data,index)=>{
               return(
                 <InputBox key={index} inputType={data.inputType} placeholderName={data.placeholderName} componentName="Login" />
@@ -45,9 +45,9 @@ const inputDetails = [
               )
             })}
             {/* <Buttons/> */}
-            <View style={{width:"80%",marginTop:12,display:"flex",flexDirection:"row",columnGap:12}} >
-            <Text style={{fontSize:20,color:"white"}} >Do you have an account yet ?</Text>
-            <Text style={{fontSize:20}} >Signup</Text>
+            <View style={styles.newAccContainer} >
+            <Text style={styles.doYou} >Do you have an account yet ?</Text>
+            <Text style={styles.signUp} >Signup</Text>
 
             </View>
          </View>
@@ -73,6 +73,18 @@ const styles = StyleSheet.create({
       flex:1,
       justifyContent:"center",
       alignItems:"center",
+    },
+    logo:{
+      width:"40%",height:"21%"
+    },
+    newAccContainer:{
+      width:"80%",marginTop:12,display:"flex",flexDirection:"row",columnGap:12
+    },
+    doYou:{
+      fontSize:20,color:"white"
+    },
+    signUp:{
+      fontSize:20
     }
   });
 

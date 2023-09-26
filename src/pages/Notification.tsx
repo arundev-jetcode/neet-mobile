@@ -12,6 +12,10 @@ import StatusBar from "../components/StatusBar";
 import Colors from "../styles/themes";
 import { moderateScale } from "../styles/Responsive";
 import FontScale from "../styles/fontResponsive";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 const Notification = () => {
   const BackgroundImg = require("../assets/BgImg.png");
 
@@ -51,16 +55,16 @@ const Notification = () => {
                   columnGap: 12,
                 }}
               >
-                <Text style={{ fontSize: FontScale(15), color: COLORS.light }}>
+                <Text style={{ fontSize: hp(2), color: COLORS.light }}>
                   Medico
                 </Text>
                 <Text style={{ color: COLORS.light  }}>now</Text>
               </View>
               <View>
-                <Text style={{ fontSize: FontScale(17), color: COLORS.light  }}>
+                <Text style={{ fontSize: hp(2.3), color: COLORS.light  }}>
                   Exam updates
                 </Text>
-                <Text style={{ fontSize: FontScale(17), color: COLORS.light  }}>
+                <Text style={{ fontSize: hp(2.4), color: COLORS.light  }}>
                   Modal exam date comming soon
                 </Text>
               </View>

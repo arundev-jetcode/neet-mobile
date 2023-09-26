@@ -5,7 +5,8 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
-  StatusBar,ScrollView
+  StatusBar,
+  ScrollView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { faCamera, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
@@ -93,7 +94,7 @@ const Profile = () => {
           Theme.COLORS.primary01,
           Theme.COLORS.primary02,
           Theme.COLORS.primary03,
-          Theme.COLORS.primary05
+          Theme.COLORS.primary05,
         ]}
         style={styles.container}
         start={{ x: 0, y: 0 }}
@@ -101,28 +102,30 @@ const Profile = () => {
         // locations={[1,0.75,1,1]}
       >
         <ImageBackground source={BackgroundImg} style={styles.Img}>
-          <ScrollView style={{flex:1}}
-          alwaysBounceVertical={true}
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false} >
-          <View style={styles.profileContainer}>
-            <View style={{ position: "relative", zIndex: 1 }}>
-              <View style={styles.imgcontainer}>
-                {image && (
-                  <Image
-                    source={{ uri: image }}
-                    style={{ width: 150, height: 150 }}
-                  />
-                )}
+          <ScrollView
+            style={{ flex: 1 }}
+            alwaysBounceVertical={true}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
+          >
+            <View style={styles.profileContainer}>
+              <View style={{ position: "relative", zIndex: 1 }}>
+                <View style={styles.imgcontainer}>
+                  {image && (
+                    <Image
+                      source={{ uri: image }}
+                      style={{ width: 150, height: 150 }}
+                    />
+                  )}
+                </View>
+                <View style={styles.uploadBtnContainer}>
+                  <TouchableOpacity onPress={addImage}>
+                    <AntDesign name="camera" size={28} color={"black"} />
+                  </TouchableOpacity>
+                </View>
               </View>
-              <View style={styles.uploadBtnContainer}>
-                <TouchableOpacity onPress={addImage}>
-                  <AntDesign name="camera" size={28} color={"black"} />
-                </TouchableOpacity>
-              </View>
-            </View>
 
-            {/* <View>
+              {/* <View>
                 <View style={styles.rounded} >
                 <Text style={styles.firstLetter} >A</Text>
                 </View>
@@ -134,41 +137,34 @@ const Profile = () => {
                 </View>
                 </View>    */}
 
-            <View style={styles.inputTotalContainer}>
-              <View
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  alignContent: "center",
-                }}
-              >
-                <Text style={styles.nameClass}>Arun dev</Text>
-                <Text style={styles.nameClass}>12th</Text>
+              <View style={styles.inputTotalContainer}>
+                <View style={styles.nameClassContainer}>
+                  <Text style={styles.nameClass}>Arun dev</Text>
+                  <Text style={styles.nameClass}>12th</Text>
+                </View>
+                <View style={styles.profileInfoIcon}>
+                  <Text style={styles.profileInfoText}>Profile Info</Text>
+                  <FontAwesomeIcon
+                    size={24}
+                    icon={faPenToSquare}
+                    color={Theme.COLORS.light}
+                  />
+                </View>
+                {inputDetails.map((data, index) => {
+                  return (
+                    <View key={index}>
+                      <InputBox
+                        inputType={data.inputType}
+                        placeholderName={data.placeholderName}
+                        fieldType={data.fieldType}
+                        value={data.value}
+                        label={data.label}
+                      />
+                    </View>
+                  );
+                })}
               </View>
-              <View style={styles.profileInfoIcon}>
-                <Text style={styles.profileInfoText}>Profile Info</Text>
-                <FontAwesomeIcon
-                  size={24}
-                  icon={faPenToSquare}
-                  color={Theme.COLORS.light}
-                />
-              </View>
-              {inputDetails.map((data, index) => {
-                return (
-                  <View key={index}>
-                    <InputBox
-                      inputType={data.inputType}
-                      placeholderName={data.placeholderName}
-                      fieldType={data.fieldType}
-                      value={data.value}
-                      label={data.label}
-                    />
-                  </View>
-                );
-              })}
             </View>
-          </View>
           </ScrollView>
         </ImageBackground>
       </LinearGradient>
@@ -181,7 +177,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop:StatusBar.currentHeight
+    paddingTop: StatusBar.currentHeight,
   },
   Img: {
     width: wp("100%"),
@@ -195,10 +191,10 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     // elevation: moderateScale(2),
-    height:wp(34),
+    height: wp(34),
     width: wp(34),
     backgroundColor: "#efefef",
-    borderRadius:wp(17),
+    borderRadius: wp(17),
     overflow: "hidden",
     top: hp(4),
     // borderWidth: 3,
@@ -216,7 +212,7 @@ const styles = StyleSheet.create({
     paddingVertical: hp("2%"),
     paddingTop: hp("5%"),
     borderRadius: 6,
-    position: "relative"
+    position: "relative",
   },
   profileInfoIcon: {
     display: "flex",
@@ -232,6 +228,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: hp("2.6%"),
     color: Theme.COLORS.light,
+  },
+  nameClassContainer: {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignContent: "center",
   },
 });
 

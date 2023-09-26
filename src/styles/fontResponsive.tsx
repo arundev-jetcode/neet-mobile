@@ -1,4 +1,4 @@
-import { useWindowDimensions } from "react-native";
+import { PixelRatio, useWindowDimensions } from "react-native";
 
 const FontScale = (size: number) => {
   const { height, width, scale, fontScale } = useWindowDimensions();
@@ -6,3 +6,6 @@ const FontScale = (size: number) => {
 };
 
 export default FontScale;
+
+const fontScale = PixelRatio.getFontScale();
+export const getFontSize = (size: number) => size / fontScale;

@@ -58,8 +58,8 @@ const Otp = () => {
               }}
             />
             <Buttons
-              width={"60%"}
-              height={"5%"}
+              width={60}
+              height={5}
               textSize={0}
               text="Verify Otp"
               backgroundColor={"#003C31"} textColor={""}            />

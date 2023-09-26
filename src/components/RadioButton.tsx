@@ -52,11 +52,11 @@ const RadioButton = ({ labelName, options, report }: RadioButtonProps) => {
                 <View style={Styles.container}>
                   <Radio
                     colorScheme="emerald"
-                    _text={{ fontSize: hp("1%") }}
                     value={res.value}
-                    my={1}
+                    my={hp(1)}
                     key={index}
-                    size={4}
+                    size={hp(2)}
+                    fontSize={hp(0.1)}
                     backgroundColor={"#707070"}
                   >
                     {res.label}

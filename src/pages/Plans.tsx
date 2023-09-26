@@ -20,7 +20,6 @@ import Buttons from "../components/Button";
     return (
       <>
         {/* <StatusBar bgColor={"transparent"} indicatorsColor={"light"}/> */}
-  
         <LinearGradient
           colors={[
             Theme.COLORS.primary01,
@@ -34,8 +33,9 @@ import Buttons from "../components/Button";
           // locations={[1,0.75,1,1]}
         >
           <ImageBackground source={BackgroundImg} style={styles.Img} imageStyle={{backgroundColor:'rgba(0, 71, 76, 0.67)',opacity:0.3}} >
-          <View style={{flex: 1,
-             paddingTop: Top,
+          <View style={{
+            flex: 1,
+            paddingTop: Top,
             paddingRight: insets.right,
             paddingBottom: insets.bottom,
             paddingLeft: insets.left}}>
@@ -104,8 +104,7 @@ import Buttons from "../components/Button";
         </View>
         <View style={{width:'100%'}} >
         <View style={{display:'flex',alignItems:'center'}} >
-
-        <Buttons width={"300"} height={"49"} textSize={17} text={"Upgrade"} backgroundColor={"#dddddd"} textColor={"black"}/>
+        <Buttons width={300} height={49} textSize={17} text={"Upgrade"} backgroundColor={"#dddddd"} textColor={"black"}/>
         </View>
         </View>
       </View>

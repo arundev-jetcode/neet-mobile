@@ -39,7 +39,7 @@ const Rewards = () => {
         <ImageBackground source={BackgroundImg} style={styles.Img}>
           <View style={styles.rewardsContainer}>
             <View style={styles.rewrdsImg}>
-              <Image source={RewardsImg} style={{ width: 200, height: 200 }} />
+              <Image source={RewardsImg} style={{ width: wp(30), height: hp(26) }} />
             </View>
 
             <View style={styles.contentContainer}>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   rewrdsImg: {
     position: "relative",
-    bottom: hp(25),
+    bottom: hp(22),
   },
   contentContainer: {
     backgroundColor: COLORS.secondary05,
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
   },
   daysContainer: {
     backgroundColor: COLORS.lightGrey80,
-    paddingHorizontal: wp(3),
+    paddingHorizontal: wp(2.5),
   },
   // claim: {
   //   borderWidth: 1,
@@ -247,9 +247,10 @@ const styles = StyleSheet.create({
   // },
   commonColor: {
     color: COLORS.light,
+    fontSize:hp(2)
   },
   commonfontSize: {
-    fontSize: hp(2.5),
+    fontSize: hp(2),
     color: COLORS.light,
   },
   verticleLine: {

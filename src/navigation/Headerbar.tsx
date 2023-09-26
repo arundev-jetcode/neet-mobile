@@ -67,13 +67,13 @@ const HeaderBar = () => {
   return (
     <View style={HeaderMenuStyle.container}>
       <View style={HeaderMenuStyle.imgContainer}>
-        {headerIcons.map((res, index) => {
+        {headerIcons.map((res,index) => {
           return (
             <View key={index}>
               <Pressable onPress={() => handleClick(index)}>
-                <View style={{display:'flex',flexDirection:'row',alignItems:'center'}} >
+                <View style={HeaderMenuStyle.topMenu} >
                 <Image source={res.icon} style={HeaderMenuStyle.imageStyle} />
-                <Text style={{color:COLORS.light,fontSize:18}} >{res.percentage}</Text>
+                <Text style={HeaderMenuStyle.percentage} >{res.percentage}</Text>
                 </View>
 
               </Pressable>
@@ -131,5 +131,11 @@ const HeaderMenuStyle = StyleSheet.create({
   neet: {
     fontSize: 20,
   },
+  topMenu:{
+    display:'flex',flexDirection:'row',alignItems:'center'
+  },
+  percentage:{
+    color:COLORS.light,fontSize:18
+  }
 });
 export default HeaderBar;
